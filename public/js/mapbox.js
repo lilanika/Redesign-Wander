@@ -76,7 +76,7 @@ map.on('load', function() {
     document.querySelector('#saveLocation').onclick = function (){
       console.log(long, lat) 
       axios.post('http://localhost:3000/addPlace', {coordinates: [long, lat], name: name, address: address, category: category} )
-  
+      //axios.post('https://wanderstr.herokuapp.com/addPlace', {coordinates: [long, lat], name: name, address: address, category: category} )
       .then(response => {
         showMarkers(); 
         showPopUp(); 
@@ -99,8 +99,8 @@ map.on('load', function() {
 
 function showMarkers(){
   console.log('SHOW MARKERS'); 
-  axios.get('http://localhost:3000/api/favoritesPlaces').then(response =>{
-
+  //axios.get('http://localhost:3000/api/favoritesPlaces').then(response =>{
+   axios.get('https://wanderstr.herokuapp.com/api/favoritesPlaces').then(response =>{
   const places = response.data.data; 
   let color = 'red'; 
   console.log(places); 
@@ -138,7 +138,7 @@ showMarkers();
 
 function showPopUp(){
    axios.get('http://localhost:3000/api/favoritesPlaces').then(response => {
-  
+    //axios.get('https://wanderstr.herokuapp.com/api/favoritesPlaces').then(response => {
     
     const places = response.data.data; 
     places.forEach(place => {

@@ -13,6 +13,9 @@
   --light-color: white;
   --card-color: #f5f7fa;
 
+  --body-color: #f5f7fa;
+  --font-color:  #2c3a47;
+  --footer-color: #c9d1d9;
 
   
   --body-color: #2c303a;
@@ -20,9 +23,7 @@
   --font-color:  #c9d1d9;
 
 
-  --body-color: #f5f7fa;
-  --font-color:  #2c3a47;
-  --footer-color: #c9d1d9;
+
 
 
 
@@ -42,7 +43,7 @@
   width: 40%;
   transition: all .5s ease;
   z-index: 100;
-  background-color: var(--grey-color);
+  background-color: var(--body-color);
   height:90vh;
 }
 
@@ -59,7 +60,8 @@ i {
   color: var(--font-color);
 }
 
-a {
+a, 
+h2 {
   color: var(--font-color);
 }
 
@@ -135,18 +137,62 @@ a {
 }
 
 
+.mapboxgl-ctrl-geocoder--suggestion{
+  font-size:1rem;
+  padding:0.5rem;
+}
+
+
+.mapboxgl-ctrl-geocoder .suggestions {
+  background-color: var(--body-color);
+  color: var(--font-color);
+  border-radius: 4px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  top: calc(100% + 6px);
+  z-index: 1000;
+  overflow: hidden;
+  font-size: 15px;
+
+}
+
+
+.mapboxgl-ctrl-geocoder .suggestions::marker {
+  background-color: var(--body-color);
+  color: var(--font-color);
+  border-radius: 4px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  top: calc(100% + 6px);
+  z-index: 1000;
+  overflow: hidden;
+  font-size: 15px;
+
+}
+
 /*# sourceMappingURL=style.css.map */
 
 
 /* nav*/ 
 
+/*
 .nav {
   align-items: center; 
   margin-right:2rem;
   background-color: rgba(255, 255, 255, 0);
  height: 5rem; 
 }
-
+*/
 /* sidebar */ 
 .sidebar {
   position: fixed; 
