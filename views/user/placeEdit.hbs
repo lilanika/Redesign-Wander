@@ -1,0 +1,69 @@
+<!--nav --> 
+<section class=" nav ">
+<h2 class="logo">Wander</h2>
+
+ <!--sidebar edit --> 
+ <section class=" ">
+    <input type="checkbox" id="check" checked>
+    <label for="check">
+      <i class="fa fa-bars" aria-hidden="hidden" id="cancel"></i>
+      <i class="fa fa-bars" id="btn"></i>
+    </label> 
+
+    <div class="sidebar">
+    <header class ="header-name"> Place Details</header>
+    <!--search-bar-->
+        <div class ="search-bar ">
+             <div id="geocoder" class="geocoder"></div>
+          <a href="/favoritesPlaces" >
+          <button class="buttonUser" id="saveLocation" >Save location</button></a>
+           </div>
+    <!--body of sidebar -->
+    <div class="profile-card">
+      <div class="card-header flexbox column "> 
+      <div class = 'favorite-place-list flexbox column'> 
+        <h2>Edit this place</h2>
+<div>{{place.name}}</div>
+{{#with place}}
+<form class="form" action="/favoritesPlaces/{{_id}}/edit" method="POST">
+  <label for="description">Description: </label>
+  <input  type="description" name="description" id="description" value="{{description}}">
+  <br>
+  <label for="tag">Tag:</label>
+  <select name="tag" id="tag">
+    <option selected> Choose...</option>
+    <option value="Food">Food</option>
+    <option value="Bar">Bar</option>
+    <option value="Park">Park</opption>
+    <option value="Sports">Sports</option>
+    <option value="Culture">Culture</option>
+    <option value="Club">Club, Party!!!</option>
+  </select>
+  <br>
+  <label for="rating"> Your rating: </label>
+  <input  type="number" name="rating" id="rating" value="{{rating}}">
+  <button class="buttonUser" id="saveTag" type="submit">Update the place</button>
+</form>
+{{/with}}
+<button class="buttonUser" type="submit">Delete</button>
+</div> <!--end of card header-->
+</div>
+<div class="card-footer">
+        <div class="numbers">
+          <div class="item">
+              <a href="/homepage" class=> Home</a> 
+          </div>
+          <div class="border"></div>
+          <div class="item">
+               <a href="/favoritesPlaces" class=> Show List</a>
+          </div>
+          <div class="border"></div>
+          <div class="item">
+               <a href="/logout" class=> Logout</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+ </section>
+ </section>

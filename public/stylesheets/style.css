@@ -1,0 +1,479 @@
+/*Map */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap');
+
+:root {
+  
+  --primary-color:#e66767;
+  --primary-color: #be9fe4 ;
+
+ /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
+  --dark-color:  #2c303a;
+  --grey-color: #f5f7fa;
+  --light-color: white;
+  --card-color: #f5f7fa;
+
+
+  
+  --body-color: #2c303a;
+  --footer-color: #2c3a47;
+  --font-color:  #c9d1d9;
+
+
+  --body-color: #f5f7fa;
+  --font-color:  #2c3a47;
+  --footer-color: #c9d1d9;
+
+
+
+
+  
+
+
+  
+}
+
+
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  position:fixed; 
+  left: -550px;
+  width: 40%;
+  transition: all .5s ease;
+  z-index: 100;
+  background-color: var(--grey-color);
+  height:90vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+i {
+  color: var(--font-color);
+}
+
+a {
+  color: var(--font-color);
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+ 
+
+  color: #221e41;
+   
+}
+
+p {
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+
+
+a {
+  color: var(--primary-color); }
+
+
+.logout { 
+  margin-top:0.3rem;
+}
+
+
+.buttonUser {
+  display:inline-block;
+  font-size: 0.8em;
+  background:white;
+  padding: 8px 25px;
+  text-decoration: none;
+  color:#111;
+  margin-top:10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+
+#map {
+  /*position: absolute; */
+ position: absolute;
+   top: 0;
+   bottom: 0;
+   width:100%;
+   height: 100vh;
+   z-index: -1; 
+ }
+
+
+/*searchbar*/
+
+ .geocoder {
+
+  /*position: absolute;*/
+  z-index: 1;
+  width: 100%;
+  padding: 0.5rem
+  /*left: 50%;*/
+  /*margin-left: -25%;*/
+  /*top: 1rem;*/
+}
+
+
+.mapboxgl-ctrl-geocoder {
+  min-width: 100%;
+  background-color:var(--footer-color); 
+}
+
+
+/*# sourceMappingURL=style.css.map */
+
+
+/* nav*/ 
+
+.nav {
+  align-items: center; 
+  margin-right:2rem;
+  background-color: rgba(255, 255, 255, 0);
+ height: 5rem; 
+}
+
+/* sidebar */ 
+.sidebar {
+  position: fixed; 
+  left: -550px;
+  width: 400px;
+  height: 100%;
+  transition: all .5s ease;
+  z-index: 100;
+}
+
+.flexbox  {
+display: flex;
+justify-content: center;
+  
+}
+
+
+.large {
+  width:200px;
+}
+
+
+#check:checked ~ .sidebar .sidebar{
+  left: 0;
+}
+
+
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+
+.sidebar ul a i{
+  margin-right: 17px;
+}
+
+/* checkbox*/
+
+label #btn,label #cancel{
+  position: absolute;
+  background: var(--body-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+
+label #btn{
+  left: 10px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+   /*top: 17px; */
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+
+#check{
+   display:none;
+}
+
+/* Ohne checked ist content weg buttons da */ 
+#check:checked ~ .sidebar{
+  left: 0; 
+}
+
+
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* X  ist dann weg wenn*/ 
+#check:checked ~ label #cancel{
+  left: 400px;
+  padding-top:2rem;
+
+}
+
+.toggle-icon {
+  height:100vh;
+  width:3px;
+  background-color: var(--primary-color) !important;
+  color:white;
+  padding-top:3rem;
+  transform: scale(0.5) translateY(-15px);
+
+}
+
+
+.toggle-icon:hover {
+  transform: scale(0.8)  translateY(-15px);
+  
+    
+}
+
+
+
+
+
+
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+
+
+.profile-card{
+  width: 400px; 
+  text-align: center;
+  border-radius: 0px 0px 0px 0px;
+  overflow: hidden; 
+  /* background-color: blueviolet;*/
+}
+
+
+.card-header{
+ /* background: #2c3a47;*/
+ display:flex;
+ flex-direction: column;
+ background: var(--body-color);
+ /* background: #2c3a47; */
+  height:70vh;
+  justify-content: space-evenly;
+  padding:2rem;
+  
+  
+}
+
+#saveLocation {
+  height: 2.5rem;
+  margin-top: 0.4rem;
+
+}
+
+
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: var(--body-color);
+  user-select: none;
+}
+
+.search-bar {
+  background: var(--body-color);
+  display:flex;
+
+  justify-content: center;
+  text-align: center;
+  padding-bottom:2rem;
+}
+
+.card-footer{
+
+ /*  background: #f4f4f4; */
+ background: var(--footer-color);
+  padding: 2rem 1.5rem;
+  height: 100vh;
+}
+
+.card-scrollbar {
+  background: #2c3a47;
+  height:430px;
+  padding: 20px;
+
+}
+
+/* scrollbar need to be fixed 
+.card-scrollbar::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.card-scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.card-scrollbar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+*/
+.pic{
+
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(130deg, #74b9ff, #e66767);
+  margin: auto;
+  border-radius: 50%;
+  /*background-size: 200% 200%;*/
+  /*animation: animated-gradient 2s linear infinite;*/
+
+}
+
+
+.pic img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name{
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.desc{
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.sm{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.sm a{
+  color: var(--font-color);
+  width: 56px;
+  font-size: 22px;
+  transition: .3s linear;
+}
+
+.sm a:hover{
+  color:var(--primary-color);
+}
+
+.contact-btn{
+  display: inline-block;
+  padding: 12px 50px;
+  color: #8eb2c4;
+  border: 2px solid #8eb2c4;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: .3s linear;
+}
+
+.contact-btn:hover{
+  background: #e66767;
+  /*color: #f2f2f2;*/ 
+  background: #e66767;
+}
+
+
+
+.numbers{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #e66767;
+}
+
+.item span{
+  display: block;
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+.border{
+  width: 1px;
+  height: 30px;
+  background: #bbb;
+}
+
+/* form 
+
+.form .form-control {
+margin: 30px 0;
+}
+
+.form input[type='description'],
+.form input[type='number"'] {
+ border: 0;
+ border-bottom:1px solid #b4becb6e;
+ width: 100%;
+ padding: 3px;
+ font-size:16px;
+ 
+}
+*/ 
+
+
+.buttonUser {
+  display:inline-block;
+  font-size: 0.8em;
+  background:white;
+  padding: 8px 10px;
+  text-decoration: none;
+  color:#111;
+  margin-top:10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  margin-bottom:0.5rem;
+}
