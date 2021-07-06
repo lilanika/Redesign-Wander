@@ -1,24 +1,34 @@
-<section class=" nav ">
-   <h2 class="logo">Wander</h2>
- <section class=" ">
-<input type="checkbox" id="check" checked>
-<!--checkbox-->
-    <label for="check">
-      <i class="fa fa-bars" aria-hidden="hidden" id="cancel"></i>
-      <i class="fa fa-bars" id="btn"></i>
+
+
+<section class=" nav">  
+
+<!--toggle-->
+    <input type="checkbox" id="check">
+    <label for="check">   
+      <i class="fa fa-bars " aria-hidden="hidden" id="btn">  </i>  
+        <i class=" toggle-icon"  id="cancel"></i>
+        </i>
     </label> 
-<!-- sidebar-->
-    <div class="sidebar">
-    <header>Search a new place      
-    </header>
-        <div class ="search-bar ">
-             <div id="geocoder" class="geocoder"></div>
-          <a href="/favoritesPlaces" >
-          <button class="buttonUser" id="saveLocation" >Save location</button></a>
-           </div>      
+  
+<!--sidebar-->
+    <div class="sidebar">  
+   <header><h2 class="header-name"> Spots</h2></header>
+    
+
+<!--searchbar-->
+      <div class ="search-bar">
+             <div id="geocoder" class="geocoder"> 
+             </div>
+              <a href="/favoritesPlaces" >
+            <button class = "btn btn-primary " id="saveLocation" > + </button></a>
+           </div>
+
+
+
     <div class="profile-card">
-      <div class="card-scrollbar">
-        <div class="name"> Your favorite places</div>
+      <div class="card-header">
+ <div class="card-scrollbar">
+      
        {{#each places}}
 <a href="/favoritesPlaces/{{this._id}}"><h1>{{name}}</h1></a>
 </form> 
@@ -38,30 +48,37 @@
   <a class="buttonUser" href="/favoritesPlaces">No filter</a>
 </form>
 </div>
-<div class="card-footer">
+
+
+    </div>
+    </div>
+      
+
+       
+      <div class="card-footer">
         <div class="numbers">
           <div class="item">
-              <a href="/homepage" class=> Home</a> 
+            <span>120</span>
+             <a href="/homepage" class=> Home</a> 
           </div>
           <div class="border"></div>
           <div class="item">
+            <span>127</span>
                <a href="/favoritesPlaces" class=> Show List</a>
           </div>
           <div class="border"></div>
           <div class="item">
-               <a href="/logout" class=> Logout</a>
+            <span>120K</span>
+            <a href="/logout" class=> Logout</a>
           </div>
         </div>
-      </div>
+            </div>
+  
+  
+  
+
+
+  
+      </div> <!--sidebar-->
    </section>
-     </section>
-
-
-
-
-
-
-
-
-
 

@@ -86,9 +86,9 @@ map.on('load', function() {
     }
 
     // //Update the marker 
-    // document.querySelector('#saveTag').onclick = function (){
+     document.querySelector('#saveTag').onclick = function (){
 
-    // }
+    }
 
 
   });
@@ -99,8 +99,8 @@ map.on('load', function() {
 
 function showMarkers(){
   console.log('SHOW MARKERS'); 
-  //axios.get('http://localhost:3000/api/favoritesPlaces').then(response =>{
-   axios.get('https://wanderstr.herokuapp.com/api/favoritesPlaces').then(response =>{
+  axios.get('http://localhost:3000/api/favoritesPlaces').then(response =>{
+   //axios.get('https://wanderstr.herokuapp.com/api/favoritesPlaces').then(response =>{
   const places = response.data.data; 
   let color = 'red'; 
   console.log(places); 
