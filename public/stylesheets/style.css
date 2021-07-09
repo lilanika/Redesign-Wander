@@ -35,9 +35,23 @@
 }
 
 
+.flexbox  {
+display: flex;
+
+  
+}
+
+header {
+  padding: 0rem 0rem 0rem 2rem;
+  
+}
+
+
+
 .sidebar {
   display:flex;
   flex-direction: column;
+  justify-content: space-between;
   position:fixed; 
   left: -550px;
   width: 40%;
@@ -60,10 +74,12 @@ i {
   color: var(--font-color);
 }
 
-a, 
-h2 {
+
+h2,
+.card-footer.nav {
   color: var(--font-color);
 }
+
 
 
 body {
@@ -197,17 +213,13 @@ a {
 .sidebar {
   position: fixed; 
   left: -550px;
-  width: 400px;
+  width: 500px;
   height: 100%;
   transition: all .5s ease;
   z-index: 100;
 }
 
-.flexbox  {
-display: flex;
-justify-content: center;
-  
-}
+
 
 
 .large {
@@ -291,7 +303,7 @@ label #cancel{
 
 /* X  ist dann weg wenn*/ 
 #check:checked ~ label #cancel{
-  left: 400px;
+  left: 500px;
   padding-top:2rem;
 
 }
@@ -318,6 +330,8 @@ label #cancel{
 
 
 
+
+
 #check:checked ~ section{
   margin-left: 250px;
 }
@@ -325,7 +339,9 @@ label #cancel{
 
 
 .profile-card{
-  width: 400px; 
+  display:flex; 
+  justify-content: center;
+  /*width: 400px; */ 
   text-align: center;
   border-radius: 0px 0px 0px 0px;
   overflow: hidden; 
@@ -339,9 +355,9 @@ label #cancel{
  flex-direction: column;
  background: var(--body-color);
  /* background: #2c3a47; */
-  height:70vh;
+  /*height:70vh;*/
   justify-content: space-evenly;
-  padding:2rem;
+ 
   
   
 }
@@ -352,6 +368,9 @@ label #cancel{
 
 }
 
+inline {
+  display:inline; 
+}
 
 
 .sidebar header {
@@ -366,24 +385,25 @@ label #cancel{
 .search-bar {
   background: var(--body-color);
   display:flex;
-
   justify-content: center;
   text-align: center;
-  padding-bottom:2rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  
 }
 
 .card-footer{
 
  /*  background: #f4f4f4; */
  background: var(--footer-color);
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .card-scrollbar {
-  background: #2c3a47;
+/*  background: #2c3a47; */
   height:430px;
-  padding: 20px;
   overflow: auto;
+  height: auto;
 
 }
 
@@ -391,6 +411,14 @@ label #cancel{
 div.border {
   color:var(--body-color);
 }
+
+
+.flexbox-select {
+  display: flex;
+  justify-content: flex-end;
+  margin-left:2rem
+}
+
 
 /* scrollbar need to be fixed 
 .card-scrollbar::-webkit-scrollbar {
@@ -476,6 +504,10 @@ div.border {
 .numbers{
   display: flex;
   align-items: center;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 2rem;
 }
 
 .item{
@@ -495,6 +527,10 @@ div.border {
   width: 1px;
   height: 30px;
   background: #bbb;
+}
+
+.form description {
+  width:300px
 }
 
 /* form 
@@ -528,3 +564,64 @@ margin: 30px 0;
   transition: 0.2s;
   margin-bottom:0.5rem;
 }
+
+
+@media(max-width: 505px) {
+
+}
+
+
+
+
+
+.pulse {
+  border-radius: 50%;
+  background:var(--footer-color);
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(92, 44, 204, 0.4);
+  
+  animation: pulse 4s infinite;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(44, 167, 204, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(209, 197, 158, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow:white;
+    box-shadow: 0 0 0 0 rgba(44, 145, 204, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+
+
+
+
+.animation {
+  transition:0.15s;
+}
+
+.animation:hover {
+  transform: scale(0.99) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
+}
+

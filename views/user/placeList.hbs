@@ -12,7 +12,12 @@
   
 <!--sidebar-->
     <div class="sidebar">  
-   <header><h2 class="header-name"> Spots</h2></header>
+    <header class="flexbox ">
+   
+   <h2><i class="fas fa-wave-square header-name "></i></h2>
+   <span class="p">|</span> 
+   
+   <span class="tag-color">spots </span></header>
     
 
 <!--searchbar-->
@@ -27,16 +32,35 @@
 
     <div class="profile-card">
       <div class="card-header">
+
+        
  <div class="card-scrollbar">
       
        {{#each places}}
-<a href="/favoritesPlaces/{{this._id}}"><h1>{{name}}</h1></a>
+    <a href="/favoritesPlaces/{{this._id}}">
+
+    <div class="p list animation">
+     
+    
+    <h3 class="p" >{{name}} </h> 
+     <p class="category-color" > {{tag
+
+}}</p>
+
+       </div>
+    </a>
+
 </form> 
+
+
 {{/each}}
-<form action="/favoritesPlaces/filter" class = "form" method="POST">
-<label for="tag"></label>
+</div>
+
+<form action="/favoritesPlaces/filter" class = "form  list " method="POST">
+
+  <label for="tag"></label>
   <select name="tag" id="tag">
-    <option selected> Choose...</option>
+    <option selected> tag...</option>
     <option value="Food">Food</option>
     <option value="Bar">Bar</option>
     <option value="Park">Park</option>
@@ -44,32 +68,34 @@
     <option value="Culture">Culture</option>
     <option value="Club">Club, Party!!!</option>
   </select>
-  <button class="buttonUser" type="submit">Filter</button>
-  <a class="buttonUser" href="/favoritesPlaces">No filter</a>
+   <button class=" btn btn-dark" type="submit">Filter</button>  
+
+
+  <!--<a class="buttonUser" href="/favoritesPlaces"> all places</a> -->
 </form>
-</div>
 
 
-    </div>
-    </div>
+
       
 
+    </div>
+    </div>
        
-      <div class="card-footer">
+      <div class="card-footer ">
         <div class="numbers">
-          <div class="item">
-            <span>120</span>
-             <a href="/homepage" class=> Home</a> 
+          <div class="item p">
+            <span><i class="fas fa-house-user "></i></span>
+             <a class="nav" href="/homepage" class=> Home</a> 
           </div>
           <div class="border"></div>
-          <div class="item">
-            <span>127</span>
-               <a href="/favoritesPlaces" class=> Show List</a>
+          <div class="item p">
+            <span>  <i class="fas fa-map-marked-alt fa-1x"></i></span>
+               <a class="nav" href="/favoritesPlaces" class=>Spots</a>
           </div>
           <div class="border"></div>
-          <div class="item">
-            <span>120K</span>
-            <a href="/logout" class=> Logout</a>
+          <div class="item p">
+            <span><i class="fas fa-sign-out-alt"></i></span>
+            <a class="nav" href="/logout" class=> Logout</a>
           </div>
         </div>
             </div>

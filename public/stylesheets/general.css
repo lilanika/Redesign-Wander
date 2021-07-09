@@ -24,10 +24,8 @@
   flex-direction: column;
 }
 
-.border { 
-  border-radius: 1rem;
-  border: 5px;
-  border-color: rgb(252, 247, 247);
+div.border {
+  margin-right: 2rem;
 }
 
 .flex-nowrap {
@@ -340,14 +338,15 @@
   color: #888;
 }
 
+
+
 .form input[type='text'],
 .form input[type='password'],
 .form input[type='date'],
-.form input[type='number'],
 .form select,
 .form textarea {
-  display: block;
-  width: 100%;
+ /* display: block;
+  width: 100%; */
   padding: 0.4rem;
   padding-left:0.8rem;
   font-size: 1.1rem;
@@ -357,21 +356,65 @@
   background-color: white;
 }
 
+
+
+
+
 .form input[type='submit'],
 button {
   font: inherit;
 }
 
+textarea {
+  height: 20vh;
+  width: 55vh ;
+}
+
+.block {
+  display:block;
+}
+
+
+.form input[type='number'],
+.form input:hover[type='description'],
+.form input:hover[type='tag'],
+.form input:hover[type='select'] {
+  display: block; 
+ width: 50px;
+ padding: 0.4rem;
+ padding-left:0.8rem;
+ font-size: 1.1rem;
+ border:  1px solid #ccc;
+ transform: capitalize;
+ border-radius:0.5rem;
+ background-color: white;
+}
+
+
 .form input:hover[type='text'],
 .form input:hover[type='password'],
-.form input:hover[type='date'],
-.form input:hover[type='number'],
+.form input:hover[type='description'],
+.form input:hover[type='tag'],
 .form input:hover[type='select'],
+.form input:hover[type='number'],
 .form select:hover
  {
   color:var(--dark-color);
   font-weight:bold;
+
+ 
 }
+
+
+.form select {
+  width: 80px;
+}
+
+.form select:hover, 
+.form select:after{
+  width: 300px;
+}
+
 
 .form textarea:hover{ 
   color:var(--dark-color);
@@ -392,3 +435,64 @@ button {
   display:flex;
   width:100vh
 }
+
+
+.list {
+background: var(--footer-color);
+margin:2rem 1.5rem 2rem 1rem;
+box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
+border-radius:0.5rem;
+width:418px;
+}
+
+
+.between {
+  justify-content: space-evenly !important;
+}
+
+
+/*
+.tag-color {
+  background-color:lightpink;
+  padding:1rem;
+  border-radius:0.5rem;
+  display:inline-block
+
+}
+
+*/ 
+
+.decription {
+  background-color:var(--footer-color);
+margin:2rem 1.5rem 2rem 1rem;
+box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
+border-radius:0.5rem;
+width:418px;
+}
+
+
+.tag-color {
+  color:powderblue;
+  font-size:0.8rem;
+  padding:1rem;
+  border-radius:0.5rem;
+}
+
+
+.rating-div {
+  background-color:var(--footer-color);
+  display:flex;
+  justify-content: space-evenly;
+    margin: 1rem;
+  width:418px;
+}
+
+
+.list {
+  background: var(--footer-color);
+  margin:2rem 1.5rem 2rem 1rem;
+  box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
+  border-radius:0.5rem;
+  width:418px;
+  padding:1rem 2rem  2rem 2rem ;
+  }
