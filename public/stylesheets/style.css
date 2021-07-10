@@ -1,29 +1,21 @@
-/*Map */ 
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap');
 
 :root {
-  
-  --primary-color:#e66767;
+ /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
+  --secondary-color:#6c8dae;
+  --primary-color: #6c8dae;
+  --footer-color:   #f7f7f7;
+  --body-color: #f1f1ef;
+  --body-color: #f3f0ec;
+  --font-color:  #2c3a47;
+
+  --primary-color:#5d9e87;
   --primary-color: #be9fe4 ;
   --secondary-color:#6c8dae;
- /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
-  --dark-color:  #2c303a;
-  --grey-color: #f5f7fa;
-  --light-color: white;
-  --card-color: #f5f7fa;
-
-  --body-color: #f5f7fa;
-  --font-color:  #2c3a47;
-  --footer-color: #c9d1d9;
-
   
   --body-color: #2c303a;
   --footer-color: #2c3a47;
   --font-color:  #c9d1d9;
-
-
-  
 }
 
 
@@ -63,21 +55,15 @@ i {
 }
 
 a {
-  color: var(--primary-color); 
+  color: var(--secondary-color); 
 }
 
 
-  header {
+ header {
     padding: 0rem 0rem 0rem 2rem;
   }
   
 
-
-/*input und geocoder */
-  #geocoder {
-    color: #6c8dae;
-  
-  }
 
 #map {
   /*position: absolute; */
@@ -89,10 +75,144 @@ a {
    z-index: -1; 
  }
 
+/*checkbox*/
+
+#check:checked ~ .sidebar .sidebar{
+  left: 0;
+}
+
+label #btn,label #cancel{
+  position: absolute;
+  background: var(--body-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+label #btn{
+  left: 10px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+   /*top: 17px; */
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+
+#check{
+   display:none;
+}
+
+/* Ohne checked ist content weg - buttons da */ 
+#check:checked ~ .sidebar{
+  left: 0; 
+}
+
+
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* X  ist dann weg wenn*/ 
+#check:checked ~ label #cancel{
+  left: 500px;
+  padding-top:2rem;
+
+}
+
+
+/* checkbox open*/
+
+.toggle-icon {
+  height:100vh;
+  width:3px;
+  background-color: var(--primary-color) !important;
+  color:white;
+  padding-top:3rem;
+  transform: scale(0.5) translateY(-15px);
+
+}
+
+.toggle-icon:hover {
+  transform: scale(0.8)  translateY(-15px);
+}
+
+
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+
+/*sidebar */
+
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position:fixed; 
+  left: -550px;
+  width: 40%;
+  transition: all .5s ease;
+  z-index: 100;
+  background-color: var(--body-color);
+  height:90vh;
+  position: fixed; 
+  width: 500px;
+  height: 100%;
+  transition: all .5s ease;
+  z-index: 100;
+ 
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  user-select: none;
+}
+
+
+/* searchbar*/ 
+
+.search-bar {
+  background: var(--body-color);
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  
+}
+
+#saveLocation {
+  height: 3rem;
+}
 
 /*searchbar*/
 
- .geocoder {
+/*input und geocoder */
+/*
+  #geocoder {
+    color: #6c8dae;
+  
+  }
+ */
+
+.geocoder {
 
   /*position: absolute;*/
   z-index: 1;
@@ -153,184 +273,7 @@ a {
 
 }
 
-/*checkbox*/
-
-#check:checked ~ .sidebar .sidebar{
-  left: 0;
-}
-
-label #btn,label #cancel{
-  position: absolute;
-  background: var(--body-color);
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-
-label #btn{
-  left: 10px;
-  top: 25px;
-  font-size: 35px;
-  color: white;
-  padding: 6px 12px;
-  transition: all .5s;
-}
-
-label #cancel{
-  z-index: 1111;
-  left: -195px;
-   /*top: 17px; */
-  font-size: 30px;
-  color: #0a5275;
-  padding: 4px 9px;
-  transition: all .5s ease;
-}
-
-#check{
-   display:none;
-}
-
-/* Ohne checked ist content weg buttons da */ 
-#check:checked ~ .sidebar{
-  left: 0; 
-}
-
-
-#check:checked ~ label #btn{
-  left: 250px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-
-/* X  ist dann weg wenn*/ 
-#check:checked ~ label #cancel{
-  left: 500px;
-  padding-top:2rem;
-
-}
-
-
-
-#saveLocation {
-  height: 3rem;
-}
-
-
-
-
-/*  suchzeichen kleiner geworden ohne der Klasse
-.sidebar ul a{
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 20px;
-  color: white;
-  padding-left: 40px;
-  box-sizing: border-box;
-  border-bottom: 1px solid black;
-  border-top: 1px solid rgba(255,255,255,.1);
-  transition: .4s;
-}
-*/ 
-
-
-/*
-ul li:hover a{
-  padding-left: 50px;
-}
-
-.sidebar ul a i{
-  margin-right: 17px;
-}
-
-
-
-/*small things
-
-.large {
-  width:200px;
-}
-
-*/
-
-  
-/*card*/
-
-/*
-.logout { 
-  margin-top:0.3rem;
-}
-*/
-
-
-/*checkbox and sidebar*/
-
-
-/* checkbox open*/
-
-.toggle-icon {
-  height:100vh;
-  width:3px;
-  background-color: var(--primary-color) !important;
-  color:white;
-  padding-top:3rem;
-  transform: scale(0.5) translateY(-15px);
-
-}
-
-.toggle-icon:hover {
-  transform: scale(0.8)  translateY(-15px);
-}
-
-
-#check:checked ~ section{
-  margin-left: 250px;
-}
-
-
-/*sidebar */
-
-
-.sidebar {
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position:fixed; 
-  left: -550px;
-  width: 40%;
-  transition: all .5s ease;
-  z-index: 100;
-  background-color: var(--body-color);
-  height:90vh;
-  position: fixed; 
-  width: 500px;
-  height: 100%;
-  transition: all .5s ease;
-  z-index: 100;
- 
-}
-
-
-.sidebar header {
-  font-size: 22px;
-  color: white;
-  line-height: 70px;
-  text-align: center;
-  user-select: none;
-}
-
-.search-bar {
-  background: var(--body-color);
-  display:flex;
-  justify-content: center;
-  text-align: center;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
-  align-items: center;
-  
-}
+/*dynamic-content*/ 
 
 .card-container {
   display:flex; 
@@ -357,52 +300,9 @@ ul li:hover a{
     height:430px;
     overflow: auto;
     height: auto;
-    
   
   }
 
-
-/* pieces */
-div.border {
-  color:var(--body-color);
-}
-
-
-.border{
-  width: 1px;
-  height: 30px;
-  background: #bbb;
-}
-
-.form description {
-  width:300px
-}
-
-
-/*
-
-
-.flexbox-select {
-  display: flex;
-  justify-content: flex-end;
-  margin-left:2rem
-}
-
-
-/* scrollbar need to be fixed 
-.card-scrollbar::-webkit-scrollbar {
-  width: 1em;
-}
- 
-.card-scrollbar::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
- 
-.card-scrollbar::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
-*/
 
 
 /*home*/ 
@@ -427,60 +327,7 @@ div.border {
 }
 
 
-
-/*buttons and secondary colors */
-
-.secondary-color {
-  color: var(--secondary-color)!important;
-}
-
-.secondary-color {
-  color: var(--primary-color)!important;
-}
-
-
-.secondary-div{
-  letter-spacing: 2px;
-  transition: 0.2s;
-  color: var(--secondary-color);
-  font-size:0.8rem;
-}
-
-.secondary-btn{
-  display: inline-block;
-  padding: 0.5rem 2rem;
-  color: var(--secondary-color);
-  border: 2px solid var(--footer-color);
-  background-color: transparent;
-  border-radius: 6px;
-  transition: .3s linear;
-  letter-spacing: 2px;
-  transition: 0.2s;
-  margin:1rem;
-  font-size:0.8rem;
-}
-
-.secondary-btn:hover{
-  color:var(--secondary-color);
-  border: 2px solid var(--secondary-color);
- 
-}
-
-/*
-
-.buttonUser {
-  display:inline-block;
-  font-size: 0.2rem;
-  background:black;
-  padding: 8px 25px;
-  text-decoration: none;
-  color:white;
-  margin-top:10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: 0.2s;
-}
-*/
+/*footer*/ 
 
 .footer{
   /*  background: #f4f4f4; */
@@ -493,58 +340,48 @@ div.border {
   display: flex;
   align-items: center;
   padding: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  align-items: center;
 }
 
 .footer-item{
   flex: 1;
   text-transform: uppercase;
-  font-size: 13px;
-  color: #e66767;
+  font-size: 13px; 
+  padding: 0rem 1.5rem
 }
 
 .footer-item span{
   display: block;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 30px;
 }
 
 
-
-
-/* form 
-
-.form .form-control {
-margin: 30px 0;
+.footer-padding {
+  padding: 0rem 1rem 0rem 0rem ;
+  text-align: center;
+  width:100px;
 }
 
-.form input[type='description'],
-.form input[type='number"'] {
- border: 0;
- border-bottom:1px solid #b4becb6e;
- width: 100%;
- padding: 3px;
- font-size:16px;
- 
+.border-footer {
+  margin-right: 1rem;
 }
-*/ 
 
-/*
-.buttonUser {
-  display:inline-block;
-  font-size: 0.8em;
-  background:white;
-  padding: 8px 10px;
-  text-decoration: none;
-  color:#111;
-  margin-top:10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: 0.2s;
-  margin-bottom:0.5rem;
+/* pieces */
+div.border {
+  color:var(--body-color);
+  margin-right: 2rem;
 }
-*/
 
+
+
+
+.border{
+  width: 1px;
+  height: 30px;
+  background: #bbb;
+}
 
 
 /*animation*/
@@ -555,8 +392,10 @@ margin: 30px 0;
   background:var(--footer-color);
   cursor: pointer;
   box-shadow: 0 0 0 rgba(92, 44, 204, 0.4);
-  margin:1.5rem;
+  margin: 2rem;
   animation: pulse 4s infinite;
+  padding: 3rem;
+  color:var(--secondary-color);
 }
 
 
@@ -597,4 +436,50 @@ margin: 30px 0;
   transform: scale(0.99) translateY(-3px);
   box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
 }
+
+
+
+
+
+.decription {
+  background-color:var(--footer-color);
+  margin:2rem 1.5rem 2rem 1rem;
+  box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
+  border-radius:0.5rem;
+  width:418px;
+  }
+  
+  
+  .tag-color {
+    color:powderblue;
+    font-size:0.8rem;
+    padding:1rem;
+    border-radius:0.5rem;
+  }
+  
+  
+  .rating-div {
+    background-color:var(--footer-color);
+    display:flex;
+    justify-content: space-evenly;
+      margin: 1rem;
+    width:418px;
+  }
+  
+  
+  .list {
+    background: var(--footer-color);
+    margin:2rem 1.5rem 2rem 1rem;
+    border-radius:0.5rem;
+    width:418px;
+    padding:1rem 2rem  2rem 2rem ;
+    }
+  
+    .list {
+      background: var(--footer-color);
+      margin:2rem 1.5rem 2rem 1rem;
+      
+      border-radius:0.5rem;
+      width:418px;
+      }
 
