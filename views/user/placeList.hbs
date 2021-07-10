@@ -30,8 +30,8 @@
 
 
 
-    <div class="profile-card">
-      <div class="card-header">
+    <div class="card-container">
+      <div class="card-body">
 
         
  <div class="card-scrollbar">
@@ -42,8 +42,8 @@
     <div class="p list animation">
      
     
-    <h3 class="p" >{{name}} </h> 
-     <p class="category-color" > {{tag
+    <p class="p" >{{name}} </p> 
+     <p class="secondary-div" > {{tag
 
 }}</p>
 
@@ -56,11 +56,11 @@
 {{/each}}
 </div>
 
-<form action="/favoritesPlaces/filter" class = "form  list " method="POST">
+<form action="/favoritesPlaces/filter" class = "form  " method="POST">
 
   <label for="tag"></label>
-  <select name="tag" id="tag">
-    <option selected> tag...</option>
+  <select class="secondary-btn" name="tag" id="tag">
+    <option selected> select</option>
     <option value="Food">Food</option>
     <option value="Bar">Bar</option>
     <option value="Park">Park</option>
@@ -68,7 +68,7 @@
     <option value="Culture">Culture</option>
     <option value="Club">Club, Party!!!</option>
   </select>
-   <button class=" btn btn-dark" type="submit">Filter</button>  
+   <button class="secondary-btn" type="submit">Filter</button>  
 
 
   <!--<a class="buttonUser" href="/favoritesPlaces"> all places</a> -->
@@ -80,23 +80,33 @@
 
     </div>
     </div>
-       
-      <div class="card-footer ">
-        <div class="numbers">
-          <div class="item p">
-            <span><i class="fas fa-house-user "></i></span>
-             <a class="nav" href="/homepage" class=> Home</a> 
+     
+      <div class="footer ">
+        <div class="footer-container">
+
+          <div class="footer-item p ">
+           <a class="nav" href="/homepage" class=>
+           <span>
+             <i class="fa fa-bars nav-btn " aria-hidden="hidden" id="btn">  </i>
+           </span>
+          </a> 
           </div>
           <div class="border"></div>
-          <div class="item p">
-            <span>  <i class="fas fa-map-marked-alt fa-1x"></i></span>
-               <a class="nav" href="/favoritesPlaces" class=>Spots</a>
-          </div>
+
+       <div class="footer-item p">
+           <a class="btn-seconary" href="/favoritesPlaces" class=>
+           <span>              
+          <i class=" nav-btn fas fa-map-marked-alt fa-1x"></i>
+          </span>
+          </a>
+       </div>
+
           <div class="border"></div>
-          <div class="item p">
-            <span><i class="fas fa-sign-out-alt"></i></span>
-            <a class="nav" href="/logout" class=> Logout</a>
+
+          <div class="footer-item p">
+            <a class="nav" href="/logout" class=> <span> <i class=" nav-btn fas fa-sign-out-alt"></i></span> </a>
           </div>
+
         </div>
             </div>
   
