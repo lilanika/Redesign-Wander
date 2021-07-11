@@ -2,7 +2,7 @@
 <section class=" ">  
 
 <!--toggle-->
-    <input type="checkbox" id="check">
+    <input type="checkbox" id="check" checked>
     <label for="check">   
       <i class="fa fa-bars " aria-hidden="hidden" id="btn">  </i>  
         <i class=" toggle-icon"  id="cancel"></i>
@@ -14,7 +14,7 @@
       
    <header class="flexbox ">
    
-   <h2><i class="fas fa-wave-square header-name "></i></h2>
+   <h2><a href="/homepage"><i class="fas fa-wave-square header-name "></i></a></h2>
    <span class="p">|</span> 
    
    <span class="tag-color"> update {{place.name}} </span></header>
@@ -76,35 +76,28 @@
 
       
 
-        
-  <div class="footer ">
-        <div class="footer-container">
-
-          <div class="footer-item p ">
-           <a class="nav" href="/homepage" class=>
-           <span>
-             <i class="fa fa-bars nav-btn " aria-hidden="hidden" id="btn">  </i>
-           </span>
-          </a> 
-          </div>
-          <div class="border"></div>
-
-       <div class="footer-item p">
-           <a class="btn-seconary" href="/favoritesPlaces" class=>
-           <span>              
-          <i class=" nav-btn fas fa-map-marked-alt fa-1x"></i>
-          </span>
-          </a>
-       </div>
-
-          <div class="border"></div>
-
-          <div class="footer-item p">
-            <a class="nav" href="/logout" class=> <span> <i class=" nav-btn fas fa-sign-out-alt"></i></span> </a>
-          </div>
-
-        </div>
-            </div>
+ <div class="footer">
+  <div class="footer-container flexbox-between">
+    <div>
+      <a class="nav" href="/favoritesPlaces" class>
+        <i class="fa fa-bars nav-btn fa-2x"></i>
+      </a>
+    </div>
+    <div class="border"></div>
+    <div>
+      <input type="checkbox" id="check" checked />
+      <label for="check">
+        <i class="nav-btn fas fa-map-marked-alt fa-2x toggle-nav"></i>
+      </label>
+    </div>
+    <div class="border"></div>
+    <div>
+      <a class="nav" href="/logout" class>
+        <i class="nav-btn fas fa-sign-out-alt fa-2x"></i>
+      </a>
+    </div>
+  </div>
+</div>
   
   
   

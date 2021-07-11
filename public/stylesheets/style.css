@@ -1,22 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap');
 
 :root {
+
+
+  --primary-color:#5d9e87;
+  --secondary-color:#5d9e87;
+  --body-color:#efeeea;
+  --footer-color: #f7f7f7;
+  --font-color:  #2c3a47;
  /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
+--primary-color: #be9fe4 ;
   --secondary-color:#6c8dae;
-  --primary-color: #6c8dae;
   --footer-color:   #f7f7f7;
   --body-color: #f1f1ef;
   --body-color: #f3f0ec;
   --font-color:  #2c3a47;
 
   --primary-color:#5d9e87;
-  --primary-color: #be9fe4 ;
-  --secondary-color:#6c8dae;
-  
   --body-color: #2c303a;
   --footer-color: #2c3a47;
   --font-color:  #c9d1d9;
+   --body-color: #2c303a;
+  --footer-color: #2c3a47;
+  --font-color:  #efeeea;
+
+ 
+ 
+  
 }
+
+
 
 
 
@@ -27,6 +40,7 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  /*opacity: 0.9; */
 }
 
 
@@ -58,9 +72,23 @@ a {
   color: var(--secondary-color); 
 }
 
+i:hover{
+  color: var(--primary-color); 
+}
+
 
  header {
     padding: 0rem 0rem 0rem 2rem;
+  }
+  
+
+  .tag-color {
+   /*  color:powderblue; */ 
+
+color:var(--primary-color);
+    font-size:0.8rem;
+    padding:1rem;
+    border-radius:0.5rem;
   }
   
 
@@ -114,7 +142,7 @@ label #cancel{
 
 /* Ohne checked ist content weg - buttons da */ 
 #check:checked ~ .sidebar{
-  left: 0; 
+  left: 0;
 }
 
 
@@ -142,7 +170,11 @@ label #cancel{
   color:white;
   padding-top:3rem;
   transform: scale(0.5) translateY(-15px);
+}
 
+
+.toggle-nav{
+ color: var(--font-color) !important;
 }
 
 .toggle-icon:hover {
@@ -178,7 +210,7 @@ label #cancel{
 
 .sidebar header {
   font-size: 22px;
-  color: white;
+
   line-height: 70px;
   text-align: center;
   user-select: none;
@@ -285,6 +317,12 @@ label #cancel{
   /* background-color: blueviolet;*/
 }
 
+
+.mapboxgl-ctrl-geocoder, .mapboxgl-ctrl-geocoder .suggestions {
+  box-shadow:none;
+}
+
+
 .card-body{
  /* background: #2c3a47;*/
  display:flex;
@@ -294,6 +332,16 @@ label #cancel{
   /*height:70vh;*/
   justify-content: space-evenly;
 }
+
+
+.list {
+  background: var(--footer-color);
+  margin:2rem 1.5rem 2rem 1rem;
+  border-radius:0.5rem;
+  width:418px;
+  padding:1rem 2rem  2rem 2rem ;
+  }
+
 
 .card-scrollbar {
   /*  background: #2c3a47; */
@@ -348,14 +396,17 @@ label #cancel{
   flex: 1;
   text-transform: uppercase;
   font-size: 13px; 
-  padding: 0rem 1.5rem
+  justify-content: center;
+
 }
 
 .footer-item span{
   display: block;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 30px;
 }
+
+
 
 
 .footer-padding {
@@ -371,7 +422,7 @@ label #cancel{
 /* pieces */
 div.border {
   color:var(--body-color);
-  margin-right: 2rem;
+ 
 }
 
 
@@ -391,7 +442,7 @@ div.border {
   border-radius: 50%;
   background:var(--footer-color);
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(92, 44, 204, 0.4);
+  box-shadow: 0 0 0 rgba(96, 204, 33, 0.4);
   margin: 2rem;
   animation: pulse 4s infinite;
   padding: 3rem;
@@ -401,7 +452,7 @@ div.border {
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(44, 167, 204, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(54, 167, 133, 0.4);
   }
   70% {
       -webkit-box-shadow: 0 0 0 10px rgba(209, 197, 158, 0);
@@ -415,7 +466,7 @@ div.border {
 @keyframes pulse {
   0% {
     -moz-box-shadow:white;
-    box-shadow: 0 0 0 0 rgba(44, 145, 204, 0.4);
+    box-shadow: 0 0 0 0 rgba(130, 189, 156, 0.4);
   }
   70% {
       -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
@@ -439,47 +490,310 @@ div.border {
 
 
 
+@media (max-height: 800px) {
+ 
+/*
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position:fixed; 
+  top: -800px;
+  transition: all .5s ease;
+  z-index: 100;
+  background-color: var(--body-color);
+  height:90vh;
+  position: fixed; 
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease;
+  z-index: 100;
+ 
+}
+
+*/
 
 
-.decription {
-  background-color:var(--footer-color);
-  margin:2rem 1.5rem 2rem 1rem;
-  box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
-  border-radius:0.5rem;
-  width:418px;
+ 
+.list{
+  padding:0.5rem;
+}
+
+
+.p-smart{
+  padding:1rem;
+}
+
+.footer {
+  padding:0.3rem 1.5rem;
+}
+
+
+
+
+}
+
+@media (max-width: 800px) {
+
+  .toggle-icon {
+    display:none;
   }
   
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position:fixed; 
+  top: -1500px;
+  transition: all .5s ease;
+  z-index: 100;
+  background-color: var(--body-color);
+  height:90vh;
+  position: fixed; 
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease;
+  z-index: 100;
+ 
+}
+
+
+.flexbox-between {
+  justify-content: space-evenly;
+}
+
+
+ 
+.list{
+  padding:0.5rem;
+}
+
+
+.p-smart{
+  padding:1rem;
+}
+
+.footer
+
+
+
+
+
+/*checkbox*/
+
+#check:checked ~ .sidebar .sidebar{
+left: 0;
+}
+
+label #btn,label #cancel{
+position: absolute;
+background: var(--body-color);
+border-radius: 3px;
+cursor: pointer;
+}
+
+
+label #btn{
+left: 10px;
+top: 25px;
+font-size: 35px;
+color: white;
+padding: 6px 12px;
+transition: all .5s;
+}
+
+label #cancel{
+z-index: 1111;
+left: -195px;
+ /*top: 17px; */
+font-size: 30px;
+color: #0a5275;
+padding: 4px 9px;
+transition: all .5s ease;
+}
+
+#check{
+ display:none;
+}
+
+/* Ohne checked ist content weg - buttons da */ 
+#check:checked ~ .sidebar{
+top: 0; 
+}
+
+
+#check:checked ~ label #btn{
+left: 250px;
+opacity: 0;
+pointer-events: none;
+}
+
+
+/* X  ist dann weg wenn*/ 
+#check:checked ~ label #cancel{
+left: 0px;
+padding-top:2rem;
+
+}
+
+
+/* checkbox open*/
+
+.toggle-icon {
+height:100vh;
+width:3px;
+background-color: var(--primary-color) !important;
+color:white;
+padding-top:3rem;
+transform: scale(0.5) translateY(-15px);
+
+}
+
+.toggle-icon:hover {
+transform: scale(0.8)  translateY(-15px);
+}
+
+
+#check:checked ~ section{
+margin-left: 250px;
+}
+
+
+/*sidebar */
+
+
+
+.sidebar header {
+font-size: 22px;
+color: white;
+line-height: 70px;
+text-align: center;
+user-select: none;
+}
+}
+
+
+
   
-  .tag-color {
-    color:powderblue;
-    font-size:0.8rem;
+
+
+
+@media (max-width: 500px) {
+
+
+  .toggle-icon {
+    display:none;
+  }
+  
+  .list{
+    padding:0.5rem;
+  }
+
+
+  .p-smart{
     padding:1rem;
-    border-radius:0.5rem;
   }
-  
-  
-  .rating-div {
-    background-color:var(--footer-color);
-    display:flex;
-    justify-content: space-evenly;
-      margin: 1rem;
-    width:418px;
-  }
-  
-  
-  .list {
-    background: var(--footer-color);
-    margin:2rem 1.5rem 2rem 1rem;
-    border-radius:0.5rem;
-    width:418px;
-    padding:1rem 2rem  2rem 2rem ;
-    }
-  
-    .list {
-      background: var(--footer-color);
-      margin:2rem 1.5rem 2rem 1rem;
-      
-      border-radius:0.5rem;
-      width:418px;
-      }
 
+  .footer {
+    padding:0.3rem 1.5rem;
+  }
+
+
+
+  /*checkbox*/
+
+#check:checked ~ .sidebar .sidebar{
+  left: 0;
+}
+
+label #btn,label #cancel{
+  position: absolute;
+  background: var(--body-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+label #btn{
+  left: 10px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+   /*top: 17px; */
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+
+#check{
+   display:none;
+}
+
+/* Ohne checked ist content weg - buttons da */ 
+#check:checked ~ .sidebar{
+  top: 0; 
+}
+
+
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* X  ist dann weg wenn*/ 
+#check:checked ~ label #cancel{
+  left: 0px;
+  padding-top:2rem;
+
+}
+
+
+/* checkbox open*/
+
+.toggle-icon {
+  height:100vh;
+  width:3px;
+  background-color: var(--primary-color) !important;
+  color:white;
+  padding-top:3rem;
+  transform: scale(0.5) translateY(-15px);
+
+}
+
+.toggle-icon:hover {
+  transform: scale(0.8)  translateY(-15px);
+}
+
+
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+
+/*sidebar */
+
+
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  user-select: none;
+}
+
+
+
+}
+
+  
