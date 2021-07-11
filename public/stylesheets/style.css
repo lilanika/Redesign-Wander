@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap');
 
-:root {
+html {
 
-
-  
  /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
 --primary-color: #be9fe4 ;
   --secondary-color:#6c8dae;
@@ -28,6 +26,18 @@
   --font-color: #5c6063;
  
   
+}
+
+
+html[data-theme='dark'] {
+  --primary-color:#5d9e87;
+  --secondary-color:#588877;
+  --body-color: #2c303a;
+  --footer-color: #2c3a47;
+  --font-color:  #c9d1d9;
+   --body-color: #2c303a;
+  --footer-color: #2c3a47;
+  --font-color:  #efeeea;
 }
 
 
