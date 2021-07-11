@@ -3,11 +3,7 @@
 :root {
 
 
-  --primary-color:#5d9e87;
-  --secondary-color:#5d9e87;
-  --body-color:#efeeea;
-  --footer-color: #f7f7f7;
-  --font-color:  #2c3a47;
+  
  /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
 --primary-color: #be9fe4 ;
   --secondary-color:#6c8dae;
@@ -17,6 +13,7 @@
   --font-color:  #2c3a47;
 
   --primary-color:#5d9e87;
+  --secondary-color:#588877;
   --body-color: #2c303a;
   --footer-color: #2c3a47;
   --font-color:  #c9d1d9;
@@ -24,11 +21,36 @@
   --footer-color: #2c3a47;
   --font-color:  #efeeea;
 
- 
+  --primary-color:#5d9e87;
+  --secondary-color:#5d9e87;
+  --body-color:#efeeea;
+  --footer-color: #f7f7f7;
+  --font-color: #5c6063;
  
   
 }
 
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 
 
