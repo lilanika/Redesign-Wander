@@ -1,40 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap');
 
 html {
-
  /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
---primary-color: #be9fe4 ;
-  --secondary-color:#6c8dae;
-  --footer-color:   #f7f7f7;
-  --body-color: #f1f1ef;
-  --body-color: #f3f0ec;
-  --font-color:  #2c3a47;
 
- 
-
-  --primary-color:#5d9e87;
-  --secondary-color:#588877;
-  --body-color: #2c303a;
-  --footer-color: #2c3a47;
-  --font-color:  #c9d1d9;
-   --body-color: #2c303a;
-  --footer-color: #2c3a47;
-  --font-color:  #efeeea;
-
-  --primary-color:#5d9e87;
-  --secondary-color:#5d9e87;
-  --body-color:#efeeea;
-  --footer-color: #f7f7f7;
-  --font-color: #5c6063;
- 
-
-  --primary:#8d3d3d;
+/*darkmodus -toggle*/ 
   --primary:#b9bcbf;
   --secondary: #c2c2c2;
-  --body-background: #f3f3f3;
   --shadow: #0001;
   --white: #fff;
-  
+ 
 }
 
 
@@ -44,10 +18,9 @@ html[data-theme='light'] {
   --body-color:#efeeea;
   --footer-color: #f7f7f7;
   --font-color: #5c6063;
-
+  --landing-body:#efeeea;
+  --landing-font-color:black;
 }
-
-
 
 
 html[data-theme='dark'] {
@@ -55,19 +28,16 @@ html[data-theme='dark'] {
   --secondary-color:#588877;
   --body-color: #2c303a;
   --footer-color: #2c3a47;
-  --font-color:  #c9d1d9;
-   --body-color: #2c303a;
-  --footer-color: #2c3a47;
   --font-color:  #efeeea;
+  --landing-body:#161718;
+  --landing-font-color:#d4d3cd;
 }
+
 
 [data-theme='light'] .d-block-light,
 [data-theme='dark'] .d-block-dark {
     display: block !important;
 }
-
-
-
 
 * {
   box-sizing: border-box;
@@ -76,7 +46,6 @@ html[data-theme='dark'] {
   list-style: none;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  /*opacity: 0.9; */
 }
 
 

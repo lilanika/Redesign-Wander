@@ -1,118 +1,103 @@
+<section>
 
-<section >  
+  <!--toggle-->
+  <input type="checkbox" id="check" checked>
+  <label for="check">
+    <i class="fa fa-bars " aria-hidden="hidden" id="btn"> </i>
+    <i class=" toggle-icon" id="cancel"></i>
+    </i>
+  </label>
 
-<!--toggle-->
-    <input type="checkbox" id="check" checked>
-    <label for="check">   
-      <i class="fa fa-bars " aria-hidden="hidden" id="btn"> </i>  
-        <i class=" toggle-icon"  id="cancel"></i>
-        </i>
-    </label> 
-  
-<!--sidebar-->
-    <div class="sidebar">  
-  <header class="flexbox ">
-   
-   <h2><a href="/homepage"><i class="fas fa-wave-square header-name "></i></a></h2>
-   <span class="p">|</span> 
-   
-   <span class="tag-color">{{place.name}} </span></header>
+  <!--sidebar-->
+  <div class="sidebar">
 
-    
+    <header class="flexbox ">
+      <h2>
+        <a href="/homepage">
+          <i class="fas fa-wave-square header-name "></i>
+        </a>
+      </h2>
+      <span class="p">|</span>
+      <span class="tag-color">{{place.name}} </span>
+    </header>
 
-<!--searchbar-->
-     
-        <div class ="search-bar ">
-             <div id="geocoder" class="geocoder"></div>
-          <a href="/favoritesPlaces" >
-          <button class="btn btn-primary " id="saveLocation" >+</button></a>
-           </div>    
+    <!--searchbar-->
 
-
-     <div class="card-container">
-      <div  class="card-body">
-      <div   class = 'card-scrollbar '> 
-
-
-<div class="list p p-smart">
-  <h2  >{{place.name}}</h2>
-<p class="secondary-div p">{{place.address}}</p>
-
-
-<div class="flexbox-evenly ">
-<p class="secondary-div" >{{place.tag}}</p> <div class="secondary-color">|</div>
-<div class="secondary-div">
-  <i class="far fa-star secondary-div">  <span class="secondary-div">{{place.rating}}</span></i> 
-  </div>
-   </div>
-</div>
-
-<div class="list">
-  <p class="p-2  ">{{place.description}}</p>
-   
-  </div>
-
-<div class="">
-
-
-  <div class="flexbox-center  my-1">
-    <a href="/favoritesPlaces" >
-<a class=" secondary-btn" href="/favoritesPlaces/{{place._id}}/edit">edit</a></a>
-
-
-<form  action="/favoritesPlaces/{{place._id }}/delete" method="POST">
-<button class="btn " type="submit"><i class="fas fa-trash "></i></button> </form>
-</div>
-
-
-  </div>
-
-
-
- 
-
-
-  {{!-- <a href="/" class=> back</a> --}}
-  </div>
-
-
-   
-</div> <!--end of card header-->
- 
+    <div class="search-bar ">
+      <div id="geocoder" class="geocoder"></div>
+      <a href="/favoritesPlaces">
+        <button class="btn btn-primary " id="saveLocation">+</button></a>
     </div>
-      
 
-<div class="footer">
-  <div class="footer-container flexbox-between">
-    <div>
-      <a class="nav" href="/favoritesPlaces" class>
-        <i class="fa fa-bars nav-btn fa-2x"></i>
-      </a>
+    <!--cardbody-->
+    <div class="card-container">
+      <div class="card-body">
+        <div class='card-scrollbar '>
+
+
+          <div class="list p p-smart">
+            <h2>{{place.name}}</h2>
+            <p class="secondary-div p">{{place.address}}</p>
+
+            <div class="flexbox-evenly ">
+              <p class="secondary-div">{{place.tag}}</p>
+              <div class="secondary-color"><p>|</p></div>
+
+              <div class="secondary-div">
+                <i class="far fa-star secondary-div">
+                  <span class="secondary-div">{{place.rating}}</span>
+                </i>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="list">
+            <p class="p-2  ">{{place.description}}</p>
+            <a class="p-2">map{{place.coordinates}}</a>
+          </div>
+
+          <div>
+            <div class="flexbox-center  my-1">
+              <a href="/favoritesPlaces">
+                <a class=" secondary-btn" href="/favoritesPlaces/{{place._id}}/edit">edit</a></a>
+              <form action="/favoritesPlaces/{{place._id }}/delete" method="POST">
+                <button class="btn " type="submit"><i class="fas fa-trash "></i></button>
+              </form>
+            </div>
+          </div>
+
+       
+        </div>
+      </div>
+      <!--end of card header-->
     </div>
-    <div class="border"></div>
-    <div>
-      <input type="checkbox" id="check" checked />
-      <label for="check">
-        <i class="nav-btn fas fa-map-marked-alt fa-2x toggle-nav"></i>
-      </label>
+
+
+    <div class="footer">
+      <div class="footer-container flexbox-between">
+        <div>
+          <a class="nav" href="/favoritesPlaces" class>
+            <i class="fa fa-bars nav-btn fa-2x"></i>
+          </a>
+        </div>
+        <div class="border"></div>
+        <div>
+          <input type="checkbox" id="check" checked />
+          <label for="check">
+            <i class="nav-btn fas fa-map-marked-alt fa-2x toggle-nav"></i>
+          </label>
+        </div>
+        <div class="border"></div>
+        <div>
+          <a class="nav" href="/logout" class>
+            <i class="nav-btn fas fa-sign-out-alt fa-2x"></i>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="border"></div>
-    <div>
-      <a class="nav" href="/logout" class>
-        <i class="nav-btn fas fa-sign-out-alt fa-2x"></i>
-      </a>
-    </div>
+
+
   </div>
-</div>
-
-  
-  
-  
-
-
-  
-      </div> <!--sidebar-->
-   </section>
-
-
-  
+  <!--sidebar-->
+</section>

@@ -115,17 +115,19 @@ function showMarkers(){
   console.log(places); 
   places.forEach(place => {
     if (place.tag === 'Food') {
-      color = 'lightskyblue'
+      color = '#9b5de5'
     } else if (place.tag === 'Bar'){
-      color = 'hotpink'
+      color = '#c65ccd'
     } else if (place.tag === 'Park'){
-      color = 'aquamarine'
+      color = '#f15bb5'
     } else if (place.tag === 'Sports'){
-      color = 'azure'
+      color = '#fee440'
     } else if (place.tag === 'Culture'){
       color = 'peachpuff'
     } else if (place.tag === 'Club'){
-      color = 'DarkSlateBlue'
+      color = '#5d9e87'
+    } else if (place.tag === 'overnight'){
+      color = '#00C8AA'
     } else {
       color = 'amarine'
     }
