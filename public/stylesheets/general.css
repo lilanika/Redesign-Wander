@@ -6,6 +6,11 @@
   }
 
 
+.wrap{
+  flex-wrap: wrap;
+}
+
+
 .flexbox-center { 
   display: flex;
   flex-wrap: wrap;
@@ -256,6 +261,7 @@
 
 .form input[type='tag'],
 .form input[type='number'], 
+
 .form select,
 .form textarea {
   padding: 0.4rem;
@@ -277,6 +283,14 @@
   border-radius:0.5rem;
   border: 2px solid var(--secondary-color);
   color: var(--secondary-color);
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border-radius:  4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  border:none;
 
 }
 
@@ -329,7 +343,7 @@ display: block;
 
 }
 
-.form input:hover[type='password'],
+
 .form input:hover[type='description'],
 .form input:hover[type='tag'],
 .form input:hover[type='select'],
