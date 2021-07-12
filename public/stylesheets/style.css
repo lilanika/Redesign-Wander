@@ -10,6 +10,8 @@ html {
   --body-color: #f3f0ec;
   --font-color:  #2c3a47;
 
+ 
+
   --primary-color:#5d9e87;
   --secondary-color:#588877;
   --body-color: #2c303a;
@@ -25,8 +27,27 @@ html {
   --footer-color: #f7f7f7;
   --font-color: #5c6063;
  
+
+  --primary:#8d3d3d;
+  --primary:#b9bcbf;
+  --secondary: #c2c2c2;
+  --body-background: #f3f3f3;
+  --shadow: #0001;
+  --white: #fff;
   
 }
+
+
+html[data-theme='light'] {
+  --primary-color:#5d9e87;
+  --secondary-color:#8b8f8e;
+  --body-color:#efeeea;
+  --footer-color: #f7f7f7;
+  --font-color: #5c6063;
+
+}
+
+
 
 
 html[data-theme='dark'] {
@@ -40,6 +61,54 @@ html[data-theme='dark'] {
   --font-color:  #efeeea;
 }
 
+[data-theme='light'] .d-block-light,
+[data-theme='dark'] .d-block-dark {
+    display: block !important;
+}
+
+
+
+.switch {
+  appearance: none;
+  height: 2em;
+  width: 4em;
+  background-color: var(--primary);
+  cursor: pointer;
+  border-radius: 1em;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.switch::before {
+  content: "";
+  height: 80%;
+  width: 40%;
+  background-color: #efeeea;
+  position: absolute;
+  border-radius: 50%;
+  border: var(--secondary) solid 0.2em;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.switch:checked {
+  background-color: var(--primary);
+}
+
+.switch:checked::before {
+  border-color: var(--primary);
+  transform: translateX(100%);
+}
+
+
+
+
+.animateOnce {
+  animation: splash 1s normal forwards ease-in-out;
+}
+
+.animateOnHover:hover {
+  animation: hover 1s infinite alternate ease-in-out;
+}
 
 
 /* width */
@@ -114,7 +183,7 @@ i:hover{
   }
   
 
-  .tag-color {
+.tag-color {
    /*  color:powderblue; */ 
 
 color:var(--primary-color);
@@ -706,12 +775,13 @@ user-select: none;
 
 
 
-  
-
 
 
 @media (max-width: 500px) {
 
+  .switch {
+    outline: none;
+  }
 
   .toggle-icon {
     display:none;
