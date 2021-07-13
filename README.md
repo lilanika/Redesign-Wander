@@ -15,20 +15,15 @@ Name: Aurel
 Password: Aurel123
 
 Wander is a full-stack application to save your favourite places around the world 
-* :mag: search function and possibility to save places on your account 
-* :pencil2: Possibility to edit the places and to add a comment, a note or a colour tag according to their categories
-* :large_blue_circle: Possibility to filter your list by category (e.g. restaurant, sport, culture)
-* :x: Possibility to delete the places you no longer want in your list
-
-❤️ Whether smartphone or big screen, it is suitable for all devices
-🌒 toggle between dark and light mode 
-🔍 Filter by categories
-✏️ Add a note to the location, change the color tag according to their    categories or delete a spot to keep your personal list of the most beautiful places in the world up to date. 
+* ❤️ Whether smartphone or big screen, it is suitable for all devices
+* 🌒 toggle between dark and light mode 
+* 🔍 Filter by categories
+* ✏️ Add a note to the location, change the color tag according to their    categories or delete a spot to keep your personal list of the most beautiful places in the world up to date. 
 
 
 Long-term goals 
 
-💪🏼 Move from handlebars to react
+💪🏼 Convert Wanda into a mobile app. Would be nice :-) 
 
 #searchingforjuniorposition #github #project #javascript #react #nodejs #cloudinary #ironhack #mongodb #grid #responsivedesign #mobilefirst #css #uidesign
 
