@@ -1,53 +1,36 @@
-
-
 <section class="showcase">
 
-   
   <form class="login-form" action="/signup" method="POST">
-  <h1><i class="fas fa-wave-square header-name text-primary"></i>REGISTER</h1>
-  <div class="textb">
-    <input type="text" name="username" >
-    <div class="placeholder">Username</div>
-  </div>
-  <div class="textb">
-    <input type="password" name="password" >
-    <div class="placeholder">Password</div>  
-  </div>
-
-
-<button class="my-3  btn btn-primary" type="submit">REGISTER</button>
-  <a href="/login">Already have an account? <b class="px-05">Login</b></a>
-</form>
-
-{{#if message}}
-  <p style='color: red'>{{message}}</p>
-{{/if}}
-
-
-
-
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <h1>
+      <i class="fas fa-wave-square header-name text-primary"></i>
+      REGISTER
+    </h1>
+    <div class="textb">
+      <input type="text" name="username" />
+      <div class="placeholder">
+        Username
+      </div>
+    </div>
+    <div class="textb">
+      <input type="password" name="password" />
+      <div class="placeholder">
+        Password
+      </div>
+    </div>
+    <button class="my-3  btn btn-primary" type="submit">
+      REGISTER
+    </button>
+    <a href="/login">
+      Already have an account?
+      <b class="px-05">
+        Login
+      </b>
+    </a>
+  </form>
+  {{#if message}}
+    <p style="color: red">
+      {{message}}
+    </p>
+  {{/if}}
+  
+</section>

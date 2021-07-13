@@ -213,7 +213,7 @@
 .secondary-btn{
   display: inline-block;
   padding: 0.5rem 2rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   background-color: transparent;
   border:none;
   border-radius: 6px;
