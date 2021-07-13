@@ -29,7 +29,7 @@ html[data-theme='dark'] {
   --body-color: #2c303a;
   --footer-color: #2c3a47;
   --font-color:  #efeeea;
-  --landing-body:#161718;
+  --landing-body:#07131f;
   --landing-font-color:#d4d3cd;
 }
 
@@ -75,6 +75,7 @@ i {
 
 a {
   color: var(--secondary-color); 
+ 
 }
 
 i:hover{
