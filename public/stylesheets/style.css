@@ -52,8 +52,8 @@ html[data-theme='dark'] {
 body {
   font-size: 1rem;
   line-height: 1.6;
-}
 
+}
 
 h2,
 .footer.nav {
@@ -96,13 +96,15 @@ i:hover{
      border-radius:0.5rem;
    }
    
-
-/* scrollbar*/ 
-
+   
 
 /* width */
 ::-webkit-scrollbar {
   width: 0px;
+  display:none;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none !important; /* Firefox 64 */
 }
 
 /* Track */
@@ -119,6 +121,22 @@ i:hover{
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+/* scrollbar*/ 
+
+
+body {
+  margin: 0; /* remove default margin */
+  scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+  -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+}
+
 
   
 

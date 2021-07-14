@@ -6,7 +6,7 @@ const map = new mapboxgl.Map({
   container: 'map', // container ID
   style: 'mapbox://styles/omgn/cklbf24ba0c9i17t551ed3mgb', // style URL*/
  /*style: 'mapbox://styles/mapbox/light-v10',  */
-  center: [13.405, 52.52], // starting position [lng, lat]
+  center: [13.405, 52.52], // starting position [lng, lat] */
   zoom: 12 // starting zoom
 });
 

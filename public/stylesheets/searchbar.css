@@ -52,6 +52,7 @@
 .mapboxgl-ctrl-geocoder {
   min-width: 100%;
   background-color:var(--footer-color); 
+  color:var(--font-color); 
 }
 
 
@@ -102,4 +103,21 @@
 
 .mapboxgl-ctrl-geocoder, .mapboxgl-ctrl-geocoder .suggestions {
   box-shadow:none;
+  
+}
+
+
+
+.mapboxgl-ctrl-geocoder--input {
+  font: inherit;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  margin: 0;
+  height: 50px;
+  color: var(--secondary-color);
+  padding: 6px 45px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
