@@ -446,10 +446,12 @@ div.border {
 }
 
 
+/*
+
 .flexbox-between {
   justify-content: space-evenly;
 }
-
+*/
 
  
 .list{
@@ -568,6 +570,11 @@ user-select: none;
 
 @media (max-width: 500px) {
 
+
+.p-2 {
+ padding:1rem !important; 
+  }
+
   .switch {
     outline: none;
   }
@@ -578,8 +585,22 @@ user-select: none;
   
   .list{
     padding:0.5rem;
+    width: 308px;
   }
 
+
+  .card-container {
+    padding: 2rem;
+  }
+
+  .pulse {
+    padding:2rem !important;
+  }
+
+
+  footer {
+    font-size:1rem;
+  }
 
   .p-smart{
     padding:1rem;
