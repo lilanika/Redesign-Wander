@@ -7,6 +7,13 @@ Wander is a full-stack application to save your favourite places around the worl
 ❤️ suitable for all devices | 🌒 toggle between dark and light mode| 🔍 Filter by categories | ✏️ Add a note to the location, change the color tag according to their categories or delete a spot to keep your personal list of the most beautiful places in the world up to date. | ⏰ 5 days without redesign
 
 
+## What it looks like 
+<img src="public\wander.png">
+<img src="public\cards-2.png">
+<img src="client\public\cards-1.png">
+<img src="client\public\papagei-settings.png">
+
+
 #searchingforjuniorposition #github #project #javascript #react #nodejs #cloudinary #ironhack #mongodb #grid #responsivedesign #mobilefirst #css #uidesign
 
 ## Credits
