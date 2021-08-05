@@ -723,11 +723,11 @@ label #cancel{
 }
 
  .py-2 {
-  padding: 0rem;
+  padding: 0rem!important;
 }
 
 .card-container {
-   padding: 1rem; 
+   padding: 1rem!important;
 }
  
 }
