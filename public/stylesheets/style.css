@@ -571,6 +571,15 @@ user-select: none;
 @media (max-width: 500px) {
 
 
+.register-link {
+font-size: 0.5rem; 
+
+  }
+
+.none i {
+  display:none;
+}
+
 .p-2 {
  padding:1rem !important; 
   }
@@ -693,8 +702,6 @@ label #cancel{
 
 
 /*sidebar */
-
-
 
 .sidebar header {
   font-size: 22px;
