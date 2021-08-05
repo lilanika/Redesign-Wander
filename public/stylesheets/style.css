@@ -571,17 +571,16 @@ user-select: none;
 @media (max-width: 500px) {
 
 
-.register-link {
-font-size: 0.5rem; 
-
-  }
-
 .none i {
   display:none;
 }
 
 .p-2 {
  padding:1rem !important; 
+  }
+
+  .footer {
+    padding: 0.3rem 0rem;
   }
 
   .switch {
@@ -603,7 +602,7 @@ font-size: 0.5rem;
   }
 
   .pulse {
-    padding:2rem !important;
+    padding:1.5rem !important;
   }
 
 
@@ -615,9 +614,7 @@ font-size: 0.5rem;
     padding:1rem;
   }
 
-  .footer {
-    padding:0.3rem 1.5rem;
-  }
+ 
 
 
 
@@ -709,6 +706,30 @@ label #cancel{
   line-height: 70px;
   text-align: center;
   user-select: none;
+}
+
+
+@media (max-width: 400px) {
+
+.register {
+ font-size:0.8rem!important;
+ }
+
+ .search-bar {
+ 
+  padding: 0 0.8rem!important;
+  margin-bottom: 0rem !important;
+ 
+}
+
+ .py-2 {
+  padding: 0rem;
+}
+
+.card-container {
+   padding: 1rem; 
+}
+ 
 }
 
 

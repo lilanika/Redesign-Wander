@@ -9,9 +9,9 @@ Wander is a full-stack application to save your favourite places around the worl
 
 ## What it looks like 
 <img src="public\wander.png">
-<img src="public\cards-2.png">
-<img src="client\public\cards-1.png">
-<img src="client\public\papagei-settings.png">
+<img src="public\wander-2.png">
+<img src="public\wander-3.png">
+<img src="public\wander-4.png">
 
 
 #searchingforjuniorposition #github #project #javascript #react #nodejs #cloudinary #ironhack #mongodb #grid #responsivedesign #mobilefirst #css #uidesign
