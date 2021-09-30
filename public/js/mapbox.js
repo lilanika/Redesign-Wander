@@ -2,6 +2,9 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoib21nbiIsImEiOiJja2w1Z2FkMGoxa3phMm5vNG5sY2ZmbmJoIn0.Bbu_dXdzyIDaG9jUy6LYhw'; 
 /*mapboxgl.accessToken = 'pk.eyJ1IjoibGlsYXdvbGtlIiwiYSI6ImNrbDZsejRzdDFleHQyd21uejVpNmFjd2kifQ.HKVGmke-kcUCQhJw6M_BgQ'; */
 
+
+
+
 const map = new mapboxgl.Map({
   container: 'map', // container ID
   style: 'mapbox://styles/omgn/cklbf24ba0c9i17t551ed3mgb', // style URL*/
