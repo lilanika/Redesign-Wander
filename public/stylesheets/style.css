@@ -8,6 +8,7 @@ html {
   --secondary: #c2c2c2;
   --shadow: #0001;
   --white: #fff;
+
  
 }
 
@@ -20,6 +21,7 @@ html[data-theme='light'] {
   --font-color: #5c6063;
   --landing-body:#efeeea;
   --landing-font-color:black;
+  --button-color:black;
 }
 
 
@@ -28,9 +30,10 @@ html[data-theme='dark'] {
   --secondary-color:#588877;
   --body-color: #2c303a;
   --footer-color: #2c3a47;
-  --font-color:  #efeeea;
+  --font-color:  #dad8d1;
   --landing-body:#07131f;
   --landing-font-color:#d4d3cd;
+  --button-color:#5d9e87;
 }
 
 
@@ -401,11 +404,11 @@ div.border {
 
 */
 
-
+/* 
  
 .list{
   padding:0.5rem;
-}
+} */
 
 
 .p-smart{
@@ -454,9 +457,7 @@ div.border {
 */
 
  
-.list{
-  padding:0.5rem;
-}
+
 
 
 .p-smart{

@@ -228,20 +228,21 @@
   background-color: transparent;
   border:none;
   border-radius: 6px;
-  transition: .3s linear;
+  /* transition: .3s linear; */
   letter-spacing: 2px;
-  transition: 0.2s;
+  /* transition: 0.2s; */
   margin:1rem;
   font-size:0.8rem;
 
 }
 
 .secondary-btn:hover{
-  color:var(--dark-color);
+  /* color:var(--dark-color);
   border: 2px solid var(--secondary-color);
   background-color: var(--secondary-color);
-  opacity: 0.4rem;
+  opacity: 0.4rem; */
 
+ color:var(--button-color);
 }
 
 
@@ -282,19 +283,10 @@
 }
 
 
-.form input[type='tag'],
-.form input[type='number'], 
+/* .form input[type='tag'], */
+/*.form input[type='number'], */
 
-.form select,
-.form textarea {
-  padding: 0.4rem;
-  padding-left:0.8rem;
-  transform: capitalize;
-  border-radius:0.5rem;
- 
-  background-color: transparent;
-  color: var(--secondary-color);
-}
+
 
 
 
@@ -317,27 +309,37 @@
 
 }
 
+.flexbox-edit-place {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.edit-place {
+background-color: white;
+}
+.rating-class {
+  padding-right:1rem;
+  margin-top:2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+  border:none;
+}
+
 .form input[type='number'] {
-  width:4rem;
-  border: 2px solid var(--footer-color);
+  /* width:4rem;
+  border: 2px solid var(--footer-color); */
+  padding-left: 0.5rem;
+  background: var(--body-color);
+  border:none;
 }
 
- textarea {
- padding:2rem !important;
- height: 40vh;
- width: 55vh ;
- color: var(--secondary-color);
- border: 2px solid var(--footer-color);
- font-size: 0.8rem;
- color: var(--font-color);
- font-weight: 600;
-}
 
-textarea:hover {
-  color:var(--secondary-color);
-  border: 2px solid var(--footer-color);
-  
-}
 
 .form placeholder {
   color:var(--secondary-color)!important;
@@ -351,8 +353,8 @@ button {
 /* hover*/ 
 
 .form input:hover[type='description'],
-.form input:hover[type='tag'],
-.form input:hover[type='rating']
+.form input:hover[type='tag']
+
  {
 display: block; 
  width: 50px;
@@ -362,28 +364,61 @@ display: block;
  border-radius:0.5rem;
  color:var(--secondary-color);
  border: 2px solid var(--secondary-color);
- 
 
+}
+
+.form input:hover[type='rating']{
+  border-color:black;
 }
 
 
 .form input:hover[type='description'],
 .form input:hover[type='tag'],
 .form input:hover[type='select'],
-
+.form input:hover[type='number'],
 .form select:hover
  {
-  color:var(--secondary-color);
-  font-weight:bold;
-  background-color:var(--footer-color);
+  color:var(--button-color);
 }
 
-
+/* 
 .form textarea:hover{ 
   color:var(--secondary-color);
 
+} */
+
+/* .form textarea {
+  padding: 0.4rem;
+ padding-left:0.8rem;
+ transform: capitalize;
+ border-radius:0.5rem;
+
 }
 
+.form textarea:hover,
+.form textarea:focus {
+border:none;
+border-color:black;
+} */
+
+textarea {
+  padding:2rem !important;
+  height: 40vh;
+  width: 55vh ;
+  color: var(--secondary-color);
+  border: 2px solid var(--footer-color);
+  font-size: 0.8rem;
+  color: var(--font-color);
+  /* font-weight: 600; */
+ }
+ 
+ textarea:hover {
+   color:var(--secondary-color);
+   border: 2px solid var(--footer-color);
+   
+ }
+
+ 
 
 .mapboxgl-ctrl-geocoder--input {
   font: inherit;

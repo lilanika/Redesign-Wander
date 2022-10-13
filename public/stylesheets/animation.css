@@ -49,5 +49,5 @@
 
 .animation:hover {
   transform: scale(0.99) translateY(-3px);
-  box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2);
+ /* box-shadow: 0 10px 20px rgba(39, 42, 56, 0.2); */
 }

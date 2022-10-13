@@ -1,17 +1,14 @@
 <section class="login-section">
-
-  <a  class="none "href="/">
+  <a class="none " href="/">
     <i class=" none fas fa-arrow-circle-left px-1 fa-2x"></i> </a>
   <form class="login-form" action="/login" method="POST">
-
     <p style="color: rgb(102, 100, 100)">
-     Aurel | password: Aurel123
+      Aurel | password: Aurel123
     </p>
     <h1>
-        <a href="/"><i class="fas fa-wave-square header-name text-primary"></i></a> 
+      <a href="/"><i class="fas fa-wave-square header-name text-primary"></i></a>
       LOGIN
     </h1>
-  
     <div class="textb">
       <input type="text" name="username" />
       <div class="placeholder">
@@ -24,15 +21,14 @@
         Password
       </div>
     </div>
-     {{#if message}}
-    <p style="color: rgb(248, 123, 196);">
-      {{message}}
-    </p>
-  {{/if}}
+    {{#if message}}
+      <p style="color: rgb(248, 123, 196);">
+        {{message}}
+      </p>
+    {{/if}}
     <button style="color:black" class="btn btn-primary  my-3" type="submit">
-    LOGIN
+      LOGIN
     </button>
-    
     <a href="/signup">
       Don't have an account?
       <b class="px-05">
@@ -40,5 +36,4 @@
       </b>
     </a>
   </form>
- 
 </section>

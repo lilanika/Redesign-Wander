@@ -61,6 +61,12 @@
   padding:0.5rem;
 }
 
+.mapboxgl-ctrl-geocoder--icon-search {
+  left: 1rem;
+  width: 20px;
+  height: 20px;
+  top: 1rem;
+}
 
 .mapboxgl-ctrl-geocoder .suggestions {
   background-color: var(--body-color);

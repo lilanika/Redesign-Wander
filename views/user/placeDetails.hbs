@@ -1,5 +1,4 @@
 <section>
-
   <!--toggle-->
   <input type="checkbox" id="check" checked>
   <label for="check">
@@ -7,56 +6,42 @@
     <i class=" toggle-icon" id="cancel"></i>
     </i>
   </label>
-
   <!--sidebar-->
   <div class="sidebar">
-
     <header class="flexbox ">
       <h2>
         <a href="/homepage">
           <i class="fas fa-wave-square header-name "></i>
         </a>
       </h2>
-      <span class="p">|</span>
       <span class="tag-color">{{place.name}} </span>
     </header>
-
     <!--searchbar-->
-
     <div class="search-bar ">
       <div id="geocoder" class="geocoder"></div>
       <a href="/favoritesPlaces">
         <button class="btn btn-primary " id="saveLocation">+</button></a>
     </div>
-
     <!--cardbody-->
     <div class="card-container">
       <div class="card-body">
         <div class='card-scrollbar '>
-
-
           <div class="list p p-smart">
             <h2>{{place.name}}</h2>
             <p class="secondary-div p">{{place.address}}</p>
-
             <div class="flexbox-evenly ">
               <p class="secondary-div">{{place.tag}}</p>
-            <p class="secondary-div">|</p>
-
+              <p class="secondary-div">|</p>
               <div class="secondary-div">
-               <i class="fas fa-star primary secondary-div"></i>
-                  <span class="secondary-div">{{place.rating}}</span>
+                <i class="fas fa-star primary secondary-div"></i>
+                <span class="secondary-div">{{place.rating}}</span>
                 </i>
               </div>
-
             </div>
           </div>
-
           <div class="list">
             <p class="p-2  ">{{place.description}}</p>
- 
           </div>
-
           <div>
             <div class="flexbox-center  my-1">
               <a href="/favoritesPlaces">
@@ -66,14 +51,10 @@
               </form>
             </div>
           </div>
-
-       
         </div>
       </div>
       <!--end of card header-->
     </div>
-
-
     <footer class="footer">
       <div class="footer-container flexbox-between">
         <div>
@@ -96,8 +77,6 @@
         </div>
       </div>
     </footer>
-
-
   </div>
   <!--sidebar-->
 </section>
