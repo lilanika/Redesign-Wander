@@ -11,13 +11,24 @@
     <header class="flexbox ">
       <h2><a href="/homepage"><i class="fas fa-wave-square header-name "></i></a></h2>
       {{!-- <span class="p">|</span> --}}
-      <span class="tag-color"> update {{place.name}} </span>
+      <span class="tag-color"> Update {{place.name}} </span>
     </header>
     <div class="card-container">
       <div class="card-body  column  ">
-        <div class='favorite-place-list  card-scrollbar '>
-          <h2>{{place.name}}</h2>
-          <p class="secondary-div p">{{place.address}}</p>
+        <div class='favorite-place-list  card-scrollbar  '>
+          <div class="list p p-smart">
+            <h2>{{place.name}}</h2>
+            <p class="secondary-div p">{{place.address}}</p>
+            <div class="flexbox-evenly ">
+              <p class="secondary-div">{{place.tag}}</p>
+              <p class="secondary-div">|</p>
+              <div class="secondary-div">
+                <i class="fas fa-star primary secondary-div"></i>
+                <span class="secondary-div">{{place.rating}}</span>
+                </i>
+              </div>
+            </div>
+          </div>
           {{#with place}}
             <form class="form" action="/favoritesPlaces/{{_id}}/edit" method="POST">
               <textarea class="list" name="description" name="description" id="description"
@@ -26,14 +37,14 @@
               <div class="flexbox-edit-place " edit-place" "><div> 
   <label for=" tag"> </label>
                 <select class="secondary-btn" name="tag" id="tag">
-                  <option selected> select..</option>
+                  <option selected> Choose a Tag</option>
                   <option value="Food">Food </option>
-                  <option value="Bar">Bar</option>
+                  <option value="Cafe">Cafe</option>
                   <option value="Park">Park</opption>
                   <option value="Sports">Sports</option>
                   <option value="Culture">Culture</option>
-                  <option value="Club">Party!!!</option>
-                  <option value="overnight">overnight</option>
+                  <option value="Club">Party</option>
+                  <option value="Overnight">Overnight</option>
                 </select>
               </div>
               <div class="mx-2 rating-class">

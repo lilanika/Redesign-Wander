@@ -332,7 +332,7 @@ button {
 
 textarea {
   padding: 2rem !important;
-  height: 40vh;
+  height: 30vh;
   width: 55vh;
   color: var(--secondary-color);
   border: 2px solid var(--footer-color);
