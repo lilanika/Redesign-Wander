@@ -8,17 +8,15 @@ const loginCheck = () => {
       next();
     } else {
       // otherwise redirect to /login
-      res.redirect('/login');
+      res.redirect("/login");
     }
-  }
-}
-
+  };
+};
 
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("index");
 });
-
 
 /*GET*/
 router.get("/homepage", (req, res, next) => {
@@ -26,12 +24,8 @@ router.get("/homepage", (req, res, next) => {
 });
 
 // protected route - can only be accessed by a logged in user
-router.get('/profile', loginCheck(), (req, res) => {
-  res.render('user/homePage');
-})
-
-
+router.get("/profile", loginCheck(), (req, res) => {
+  res.render("user/homePage");
+});
 
 module.exports = router;
-
-

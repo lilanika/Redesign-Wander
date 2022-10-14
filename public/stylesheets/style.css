@@ -1,45 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap");
 
 html {
- /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
+  /*--primary-color:linear-gradient(to right,#313B47,#00C8AA);*/
 
-/*darkmodus -toggle*/ 
-  --primary:#b9bcbf;
+  /*darkmodus -toggle*/
+  --primary: #b9bcbf;
   --secondary: #c2c2c2;
   --shadow: #0001;
   --white: #fff;
-
- 
 }
 
-
-html[data-theme='light'] {
-  --primary-color:#5d9e87;
-  --secondary-color:#8b8f8e;
-  --body-color:#efeeea;
+html[data-theme="light"] {
+  --primary-color: #5d9e87;
+  --secondary-color: #8b8f8e;
+  --body-color: #efeeea;
   --footer-color: #f7f7f7;
   --font-color: #5c6063;
-  --landing-body:#efeeea;
-  --landing-font-color:black;
-  --button-color:black;
+  --landing-body: #efeeea;
+  --landing-font-color: black;
+  --button-color: black;
 }
 
-
-html[data-theme='dark'] {
-  --primary-color:#5d9e87;
-  --secondary-color:#588877;
+html[data-theme="dark"] {
+  --primary-color: #5d9e87;
+  --secondary-color: #588877;
   --body-color: #2c303a;
   --footer-color: #2c3a47;
-  --font-color:  #dad8d1;
-  --landing-body:#07131f;
-  --landing-font-color:#d4d3cd;
-  --button-color:#5d9e87;
+  --font-color: #efeeea;
+  --landing-body: #07131f;
+  --landing-font-color: #d4d3cd;
+  --button-color: #5d9e87;
 }
 
-
-[data-theme='light'] .d-block-light,
-[data-theme='dark'] .d-block-dark {
-    display: block !important;
+[data-theme="light"] .d-block-light,
+[data-theme="dark"] .d-block-dark {
+  display: block !important;
 }
 
 * {
@@ -48,14 +43,12 @@ html[data-theme='dark'] {
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 body {
   font-size: 1rem;
   line-height: 1.6;
-
 }
 
 h2,
@@ -63,12 +56,10 @@ h2,
   color: var(--font-color);
 }
 
-
 h3 {
   letter-spacing: 1px;
   transition: 0.2s;
 }
-
 
 p,
 i {
@@ -77,34 +68,29 @@ i {
 }
 
 a {
-  color: var(--secondary-color); 
- 
+  color: var(--secondary-color);
 }
 
-i:hover{
-  color: var(--primary-color); 
+i:hover {
+  color: var(--primary-color);
 }
 
+header {
+  padding: 0rem 0rem 0rem 2rem;
+}
 
- header {
-    padding: 0rem 0rem 0rem 2rem;
-  }
-
-
-  .tag-color {
-    /*  color:powderblue; */ 
- color:var(--primary-color);
-     font-size:0.8rem;
-     padding:1rem;
-     border-radius:0.5rem;
-   }
-   
-   
+.tag-color {
+  /*  color:powderblue; */
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
 
 /* width */
 ::-webkit-scrollbar {
   width: 0px;
-  display:none;
+  display: none;
   overflow: auto;
   -ms-overflow-style: none; /* IE 11 */
   scrollbar-width: none !important; /* Firefox 64 */
@@ -125,14 +111,12 @@ i:hover{
   background: #555;
 }
 
-
-/* scrollbar*/ 
-
+/* scrollbar*/
 
 body {
   margin: 0; /* remove default margin */
   scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
-  -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+  -ms-overflow-style: none; /* Disable scrollbar IE 10+ */
   overflow-y: scroll;
 }
 body::-webkit-scrollbar {
@@ -140,112 +124,102 @@ body::-webkit-scrollbar {
   background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
-
-  
-
 /*checkbox for the Sidebar*/
 
-#check:checked ~ .sidebar .sidebar{
+#check:checked ~ .sidebar .sidebar {
   left: 0;
 }
 
-label #btn,label #cancel{
+label #btn,
+label #cancel {
   position: absolute;
   background: var(--body-color);
   border-radius: 3px;
   cursor: pointer;
 }
 
-
-label #btn{
+label #btn {
   left: 10px;
   top: 25px;
   font-size: 35px;
   color: white;
   padding: 6px 12px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-label #cancel{
+label #cancel {
   z-index: 1111;
   left: -195px;
-   /*top: 17px; */
+  /*top: 17px; */
   font-size: 30px;
   color: #0a5275;
   padding: 4px 9px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
-#check{
-   display:none;
+#check {
+  display: none;
 }
 
-/* Ohne checked ist content weg - buttons da */ 
-#check:checked ~ .sidebar{
+/* Ohne checked ist content weg - buttons da */
+#check:checked ~ .sidebar {
   left: 0;
 }
 
-
-#check:checked ~ label #btn{
+#check:checked ~ label #btn {
   left: 250px;
   opacity: 0;
   pointer-events: none;
 }
 
-
-/* X  ist dann weg wenn*/ 
-#check:checked ~ label #cancel{
+/* X  ist dann weg wenn*/
+#check:checked ~ label #cancel {
   left: 500px;
-  padding-top:2rem;
-
+  padding-top: 2rem;
 }
-
 
 /* checkbox open*/
 
 .toggle-icon {
-  height:100vh;
-  width:3px;
+  height: 100vh;
+  width: 3px;
   background-color: var(--primary-color) !important;
-  color:white;
-  padding-top:3rem;
+  color: white;
+  padding-top: 3rem;
   transform: scale(0.5) translateY(-15px);
 }
 
-.toggle-nav{
- color: var(--font-color) !important;
+.toggle-nav {
+  color: var(--font-color) !important;
 }
 
 .toggle-icon:hover {
-  transform: scale(0.8)  translateY(-15px);
+  transform: scale(0.8) translateY(-15px);
 }
 
-
-#check:checked ~ section{
+#check:checked ~ section {
   margin-left: 250px;
 }
-
 
 /*sidebar */
 
 .sidebar {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position:fixed; 
+  position: fixed;
   left: -550px;
   width: 40%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   z-index: 100;
   background-color: var(--body-color);
-  height:90vh;
-  position: fixed; 
+  height: 90vh;
+  position: fixed;
   width: 500px;
   height: 100%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   z-index: 100;
   opacity: 0.95;
- 
 }
 
 .sidebar header {
@@ -255,85 +229,73 @@ label #cancel{
   user-select: none;
 }
 
-
-
-
-/*dynamic-content*/ 
+/*dynamic-content*/
 
 .card-container {
-  display:flex; 
+  display: flex;
   justify-content: center;
-  /*width: 400px; */ 
+  /*width: 400px; */
   text-align: center;
   border-radius: 0px 0px 0px 0px;
-  overflow: hidden; 
+  overflow: hidden;
   /* background-color: blueviolet;*/
 }
 
+.card-body {
+  /* background: #2c3a47;*/
+  display: flex;
+  flex-direction: column;
 
-
-.card-body{
- /* background: #2c3a47;*/
- display:flex;
- flex-direction: column;
-
- /* background: #2c3a47; */
+  /* background: #2c3a47; */
   /*height:70vh;*/
   justify-content: space-evenly;
 }
 
-
 .list {
   background: var(--footer-color);
-  margin:2rem 1.5rem 2rem 1rem;
-  border-radius:0.5rem;
-  width:418px;
-  padding:1rem 2rem  2rem 2rem ;
-  }
-
+  margin: 2rem 1.5rem 2rem 1rem;
+  border-radius: 0.5rem;
+  width: 418px;
+  padding: 1rem 2rem 2rem 2rem;
+}
 
 .card-scrollbar {
   /*  background: #2c3a47; */
-    height:430px;
-    overflow: auto;
-    height: auto;
-  
-  }
+  height: 430px;
+  overflow: auto;
+  height: auto;
+}
 
-
-
-/*home*/ 
+/*home*/
 
 /*homepage icons */
 
-.sm{
+.sm {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-.sm a{
+.sm a {
   color: var(--font-color);
   width: 56px;
   font-size: 22px;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
-.sm a:hover{
-  color:var(--primary-color);
+.sm a:hover {
+  color: var(--primary-color);
 }
 
+/*footer*/
 
-/*footer*/ 
-
-.footer{
+.footer {
   /*  background: #f4f4f4; */
   background: var(--footer-color);
-   padding: 1rem 1.5rem;
- }
+  padding: 1rem 1.5rem;
+}
 
-
-.footer-container{
+.footer-container {
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -341,25 +303,23 @@ label #cancel{
   align-items: center;
 }
 
-.footer-item{
+.footer-item {
   flex: 1;
   text-transform: uppercase;
-  font-size: 13px; 
+  font-size: 13px;
   justify-content: center;
-
 }
 
-.footer-item span{
+.footer-item span {
   display: block;
   color: var(--primary-color);
   font-size: 30px;
 }
 
-
 .footer-padding {
-  padding: 0rem 1rem 0rem 0rem ;
+  padding: 0rem 1rem 0rem 0rem;
   text-align: center;
-  width:100px;
+  width: 100px;
 }
 
 .border-footer {
@@ -368,216 +328,148 @@ label #cancel{
 
 /* pieces */
 div.border {
-  color:var(--body-color);
- 
+  color: var(--body-color);
 }
 
-.border{
+.border {
   width: 1px;
   height: 30px;
   background: #bbb;
 }
 
-
-
-
 @media (max-height: 800px) {
- 
-/*
-.sidebar {
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position:fixed; 
-  top: -800px;
-  transition: all .5s ease;
-  z-index: 100;
-  background-color: var(--body-color);
-  height:90vh;
-  position: fixed; 
-  width: 100%;
-  height: 100%;
-  transition: all .5s ease;
-  z-index: 100;
- 
-}
 
-*/
+  .p-smart {
+    padding: 1rem;
+  }
 
-/* 
- 
-.list{
-  padding:0.5rem;
-} */
-
-
-.p-smart{
-  padding:1rem;
-}
-
-.footer {
-  padding:0.3rem 1.5rem;
-}
-
-
-
-
+  .footer {
+    padding: 0.3rem 1.5rem;
+  }
 }
 
 @media (max-width: 800px) {
-
   .toggle-icon {
-    display:none;
+    display: none;
   }
-  
-.sidebar {
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position:fixed; 
-  top: -1500px;
-  transition: all .5s ease;
-  z-index: 100;
-  background-color: var(--body-color);
-  height:90vh;
-  position: fixed; 
-  width: 100%;
-  height: 100%;
-  transition: all .5s ease;
-  z-index: 100;
- 
-}
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: -1500px;
+    transition: all 0.5s ease;
+    z-index: 100;
+    background-color: var(--body-color);
+    height: 90vh;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
 
 
-/*
-
-.flexbox-between {
-  justify-content: space-evenly;
-}
-*/
-
- 
-
-
-
-.p-smart{
-  padding:1rem;
-}
-
-.footer
-
-
-
-
+  .p-smart {
+    padding: 1rem;
+  }
 
 /*checkbox*/
 
-#check:checked ~ .sidebar .sidebar{
-left: 0;
+#check:checked ~ .sidebar .sidebar {
+    left: 0;
+  }
+
+  label #btn,
+  label #cancel {
+    position: absolute;
+    background: var(--body-color);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  label #btn {
+    left: 10px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+  }
+
+  label #cancel {
+    z-index: 1111;
+    left: -195px;
+    /*top: 17px; */
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all 0.5s ease;
+  }
+
+  #check {
+    display: none;
+  }
+
+  /* Ohne checked ist content weg - buttons da */
+  #check:checked ~ .sidebar {
+    top: 0;
+  }
+
+  #check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* X  ist dann weg wenn*/
+  #check:checked ~ label #cancel {
+    left: 0px;
+    padding-top: 2rem;
+  }
+
+  /* checkbox open*/
+
+  .toggle-icon {
+    height: 100vh;
+    width: 3px;
+    background-color: var(--primary-color) !important;
+    color: white;
+    padding-top: 3rem;
+    transform: scale(0.5) translateY(-15px);
+  }
+
+  .toggle-icon:hover {
+    transform: scale(0.8) translateY(-15px);
+  }
+
+  #check:checked ~ section {
+    margin-left: 250px;
+  }
+
+  /*sidebar */
+
+  .sidebar header {
+    font-size: 22px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    user-select: none;
+  }
 }
-
-label #btn,label #cancel{
-position: absolute;
-background: var(--body-color);
-border-radius: 3px;
-cursor: pointer;
-}
-
-
-label #btn{
-left: 10px;
-top: 25px;
-font-size: 35px;
-color: white;
-padding: 6px 12px;
-transition: all .5s;
-}
-
-label #cancel{
-z-index: 1111;
-left: -195px;
- /*top: 17px; */
-font-size: 30px;
-color: #0a5275;
-padding: 4px 9px;
-transition: all .5s ease;
-}
-
-#check{
- display:none;
-}
-
-/* Ohne checked ist content weg - buttons da */ 
-#check:checked ~ .sidebar{
-top: 0; 
-}
-
-
-#check:checked ~ label #btn{
-left: 250px;
-opacity: 0;
-pointer-events: none;
-}
-
-
-/* X  ist dann weg wenn*/ 
-#check:checked ~ label #cancel{
-left: 0px;
-padding-top:2rem;
-
-}
-
-
-/* checkbox open*/
-
-.toggle-icon {
-height:100vh;
-width:3px;
-background-color: var(--primary-color) !important;
-color:white;
-padding-top:3rem;
-transform: scale(0.5) translateY(-15px);
-
-}
-
-.toggle-icon:hover {
-transform: scale(0.8)  translateY(-15px);
-}
-
-
-#check:checked ~ section{
-margin-left: 250px;
-}
-
-
-/*sidebar */
-
-
-
-.sidebar header {
-font-size: 22px;
-color: white;
-line-height: 70px;
-text-align: center;
-user-select: none;
-}
-}
-
-
 
 .block {
-  display:block;
+  display: block;
 }
 
 @media (max-width: 500px) {
+  .none i {
+    display: none;
+  }
 
-
-.none i {
-  display:none;
-}
-
-.p-2 {
- padding:1rem !important; 
+  .p-2 {
+    padding: 1rem !important;
   }
 
   .footer {
@@ -589,152 +481,129 @@ user-select: none;
   }
 
   .toggle-icon {
-    display:none;
-  }
-  
-  .list{
-    padding:0.5rem;
-    width: 308px;
+    display: none;
   }
 
+  .list {
+    padding: 0.5rem;
+    width: 308px;
+  }
 
   .card-container {
     padding: 2rem;
   }
 
   .pulse {
-    padding:1.5rem !important;
+    padding: 1.5rem !important;
   }
-
 
   footer {
-    font-size:1rem;
+    font-size: 1rem;
   }
 
-  .p-smart{
-    padding:1rem;
+  .p-smart {
+    padding: 1rem;
   }
-
- 
-
-
 
   /*checkbox*/
 
-#check:checked ~ .sidebar .sidebar{
-  left: 0;
+  #check:checked ~ .sidebar .sidebar {
+    left: 0;
+  }
+
+  label #btn,
+  label #cancel {
+    position: absolute;
+    background: var(--body-color);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  label #btn {
+    left: 10px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+  }
+
+  label #cancel {
+    z-index: 1111;
+    left: -195px;
+    /*top: 17px; */
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all 0.5s ease;
+  }
+
+  #check {
+    display: none;
+  }
+
+  /* Ohne checked ist content weg - buttons da */
+  #check:checked ~ .sidebar {
+    top: 0;
+  }
+
+  #check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* X  ist dann weg wenn*/
+  #check:checked ~ label #cancel {
+    left: 0px;
+    padding-top: 2rem;
+  }
+
+  /* checkbox open*/
+
+  .toggle-icon {
+    height: 100vh;
+    width: 3px;
+    background-color: var(--primary-color) !important;
+    color: white;
+    padding-top: 3rem;
+    transform: scale(0.5) translateY(-15px);
+  }
+
+  .toggle-icon:hover {
+    transform: scale(0.8) translateY(-15px);
+  }
+
+  #check:checked ~ section {
+    margin-left: 250px;
+  }
+
+  /*sidebar */
+
+  .sidebar header {
+    font-size: 22px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    user-select: none;
+  }
+
+  @media (max-width: 400px) {
+    .register {
+      font-size: 0.8rem !important;
+    }
+
+    .search-bar {
+      padding: 0 0.8rem !important;
+      margin-bottom: 0rem !important;
+    }
+
+    .py-2 {
+      padding: 0rem !important;
+    }
+
+    .card-container {
+      padding: 1rem !important;
+    }
+  }
 }
-
-label #btn,label #cancel{
-  position: absolute;
-  background: var(--body-color);
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-
-label #btn{
-  left: 10px;
-  top: 25px;
-  font-size: 35px;
-  color: white;
-  padding: 6px 12px;
-  transition: all .5s;
-}
-
-label #cancel{
-  z-index: 1111;
-  left: -195px;
-   /*top: 17px; */
-  font-size: 30px;
-  color: #0a5275;
-  padding: 4px 9px;
-  transition: all .5s ease;
-}
-
-#check{
-   display:none;
-}
-
-/* Ohne checked ist content weg - buttons da */ 
-#check:checked ~ .sidebar{
-  top: 0; 
-}
-
-
-#check:checked ~ label #btn{
-  left: 250px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-
-/* X  ist dann weg wenn*/ 
-#check:checked ~ label #cancel{
-  left: 0px;
-  padding-top:2rem;
-
-}
-
-
-/* checkbox open*/
-
-.toggle-icon {
-  height:100vh;
-  width:3px;
-  background-color: var(--primary-color) !important;
-  color:white;
-  padding-top:3rem;
-  transform: scale(0.5) translateY(-15px);
-
-}
-
-.toggle-icon:hover {
-  transform: scale(0.8)  translateY(-15px);
-}
-
-
-#check:checked ~ section{
-  margin-left: 250px;
-}
-
-
-/*sidebar */
-
-.sidebar header {
-  font-size: 22px;
-  color: white;
-  line-height: 70px;
-  text-align: center;
-  user-select: none;
-}
-
-
-@media (max-width: 400px) {
-
-.register {
- font-size:0.8rem!important;
- }
-
- .search-bar {
- 
-  padding: 0 0.8rem!important;
-  margin-bottom: 0rem !important;
- 
-}
-
- .py-2 {
-  padding: 0rem!important;
-}
-
-.card-container {
-   padding: 1rem!important;
-}
- 
-}
-
-
-
-}
-
-  

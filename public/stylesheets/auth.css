@@ -15,8 +15,6 @@
   transition: 0.5s;
   background-color: var(--landing-body);
   opacity: 0.90;
-
-
   }
 
 
@@ -33,7 +31,7 @@
     padding:1rem 2rem;
   }
 
-  .login {
+  .login-button {
     width:100%;
   }
 
