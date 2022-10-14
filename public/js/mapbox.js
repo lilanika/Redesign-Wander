@@ -1,7 +1,7 @@
 mapboxgl.accessToken =
   "pk.eyJ1Ijoib21nbiIsImEiOiJja2w1Z2FkMGoxa3phMm5vNG5sY2ZmbmJoIn0.Bbu_dXdzyIDaG9jUy6LYhw";
 
-  // mapboxgl.accessToken = 'pk.eyJ1IjoibGlsYXdvbGtlIiwiYSI6ImNrbDZsejRzdDFleHQyd21uejVpNmFjd2kifQ.HKVGmke-kcUCQhJw6M_BgQ'; 
+// mapboxgl.accessToken = 'pk.eyJ1IjoibGlsYXdvbGtlIiwiYSI6ImNrbDZsejRzdDFleHQyd21uejVpNmFjd2kifQ.HKVGmke-kcUCQhJw6M_BgQ';
 
 const map = new mapboxgl.Map({
   container: "map", // container ID
@@ -110,7 +110,7 @@ function showMarkers() {
       places.forEach((place) => {
         if (place.tag === "Food") {
           color = "#9b5de5";
-        } else if (place.tag === "Bar") {
+        } else if (place.tag === "Cafe") {
           color = "#c65ccd";
         } else if (place.tag === "Park") {
           color = "#f15bb5";
@@ -120,7 +120,7 @@ function showMarkers() {
           color = "peachpuff";
         } else if (place.tag === "Club") {
           color = "#5d9e87";
-        } else if (place.tag === "overnight") {
+        } else if (place.tag === "Overnight") {
           color = "#00C8AA";
         } else {
           color = "amarine";
