@@ -57,6 +57,7 @@
   }
   
   .social li a {
+    padding-left:0.3rem;
     display: inline-block;
     transform: scale(0.5);
     transition:0.5s;
