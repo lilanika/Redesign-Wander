@@ -470,6 +470,9 @@ div.border {
     display: none;
   }
 
+  .flexbox-edit-place  .mx-2 {
+    margin: 0 1rem
+  }
   form .secondary-btn {
     margin:0rem!important;
  
