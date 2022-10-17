@@ -13,15 +13,22 @@
 /* searchbar*/ 
 
 .search-bar {
-  /* background: var(--body-color); */
   display:flex;
   justify-content: center;
   text-align: center;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
+  /* padding: 0 2rem; */
+   margin-bottom: 2rem; 
   align-items: center;
+  width:433px;
   
 }
+
+.flexbox-searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 #saveLocation {
   height: 3rem;
@@ -29,13 +36,7 @@
 
 /*searchbar*/
 
-/*input und geocoder */
-/*
-  #geocoder {
-    color: #6c8dae;
-  
-  }
- */
+
 
 .geocoder {
   z-index: 1;

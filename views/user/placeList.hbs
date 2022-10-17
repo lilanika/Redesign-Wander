@@ -13,11 +13,13 @@
       <span class="tag-color">spots </span>
     </header>
     <!--searchbar-->
-    <div class="search-bar">
-      <div id="geocoder" class="geocoder">
+    <div class="flexbox-searchbar ">
+      <div class="search-bar">
+        <div id="geocoder" class="geocoder">
+        </div>
+        <a href="/favoritesPlaces">
+          <button class="btn btn-primary " id="saveLocation"> + </button></a>
       </div>
-      <a href="/favoritesPlaces">
-        <button class="btn btn-primary " id="saveLocation"> + </button></a>
     </div>
     <div class="card-container">
       <div class="card-body">
@@ -32,7 +34,7 @@
             </form>
           {{/each}}
         </div>
-        <form action="/favoritesPlaces/filter" class="form py-2 filter-border " method="POST">
+        <form action="/favoritesPlaces/filter" class="form py-1 filter-border " method="POST">
           <label for="tag"></label>
           <select class="secondary-btn" name="tag" id="tag">
             <option selected> Tags</option>
