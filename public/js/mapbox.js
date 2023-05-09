@@ -78,7 +78,7 @@ map.on("load", function () {
       // axios.post('http://localhost:3000/addPlace', {coordinates: [long, lat], name: name, address: address, category: category} )
 
       axios
-        .post("https://wander-share-your-spots.herokuapp.com/addPlace", {
+        .post("https://redesign-wander-production.up.railway.app/addPlace", {
           coordinates: [long, lat],
           name: name,
           address: address,
@@ -102,7 +102,9 @@ function showMarkers() {
   //axios.get('http://localhost:3000/api/favoritesPlaces').then(response =>{
 
   axios
-    .get("https://wander-share-your-spots.herokuapp.com/api/favoritesPlaces")
+    .get(
+      "https://redesign-wander-production.up.railway.app/api/favoritesPlaces"
+    )
     .then((response) => {
       const places = response.data.data;
       let color = "red";
@@ -143,8 +145,11 @@ showMarkers();
 function showPopUp() {
   //axios.get('http://localhost:3000/api/favoritesPlaces').then(response => {
 
+  //https://wander-share-your-spots.herokuapp.com
   axios
-    .get("https://wander-share-your-spots.herokuapp.com/api/favoritesPlaces")
+    .get(
+      "https://redesign-wander-production.up.railway.app/api/favoritesPlaces"
+    )
     .then((response) => {
       const places = response.data.data;
       places.forEach((place) => {
