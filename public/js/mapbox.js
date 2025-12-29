@@ -5,7 +5,7 @@ mapboxgl.accessToken =
 
 const map = new mapboxgl.Map({
   container: "map", // container ID
-  style: "mapbox://styles/mapbox/streets-v12 ", // style URL*/
+  style: "mapbox://styles/mapbox/streets-v12", // style URL*/
   /*style: 'mapbox://styles/mapbox/light-v10', mapbox://styles/lilawolke/ckla2e7231icq17sauvgo6pdd */
   center: [13.405, 52.52], // starting position [lng, lat] */
   zoom: 12, // starting zoom
@@ -13,6 +13,16 @@ const map = new mapboxgl.Map({
 
 const nav = new mapboxgl.NavigationControl();
 map.addControl(nav, "bottom-right");
+
+// Check if geocoder element exists before appending
+const geocoderContainer = document.getElementById("geocoder");
+if (geocoderContainer) {
+  var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl,
+  });
+  geocoderContainer.appendChild(geocoder.onAdd(map));
+}
 
 // Marker
 var marker = new mapboxgl.Marker() // initialize a new marker
