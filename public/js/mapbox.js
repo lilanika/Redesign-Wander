@@ -1,5 +1,5 @@
 mapboxgl.accessToken =
-  "pk.eyJ1Ijoib21nbiIsImEiOiJja2w1Z2FkMGoxa3phMm5vNG5sY2ZmbmJoIn0.Bbu_dXdzyIDaG9jUy6LYhw";
+  "sk.eyJ1IjoibGlsYXdvbGtlIiwiYSI6ImNtanJqMDQxODBkYXYza3F3djF3YTV6MTYifQ.6sBL2Q3RQWjjp0x2ZZiZrg";
 
 // mapboxgl.accessToken = 'pk.eyJ1IjoibGlsYXdvbGtlIiwiYSI6ImNrbDZsejRzdDFleHQyd21uejVpNmFjd2kifQ.HKVGmke-kcUCQhJw6M_BgQ';
 
