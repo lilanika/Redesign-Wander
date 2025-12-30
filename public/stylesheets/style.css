@@ -339,6 +339,53 @@ div.border {
   background: #bbb;
 }
 
+/* Star Rating */
+.rating-star {
+  font-size: 28px;
+  color: #444;
+  transition: color 0.2s;
+}
+
+.rating-star.active {
+  color: #fbbf24;
+}
+
+label:hover .rating-star {
+  color: #fbbf24;
+}
+
+/* Tag Pills */
+.tag-pill {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.tag-pill input {
+  display: none;
+}
+
+.tag-pill span {
+  display: inline-block;
+  padding: 8px 16px;
+  background: transparent;
+  border: 2px solid #444;
+  border-radius: 20px;
+  color: var(--font-color);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.tag-pill input:checked + span {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.tag-pill:hover span {
+  border-color: var(--primary-color);
+}
+
+
 @media (max-height: 800px) {
 
   .p-smart {

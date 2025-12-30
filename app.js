@@ -13,41 +13,49 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
+// Add these helpers
+hbs.registerHelper("eq", function (a, b) {
+  return a === b;
+});
+
+hbs.registerHelper("gte", function (a, b) {
+  return a >= b;
+});
+
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most middlewares
 require("./config")(app);
 
-
 // session configuration
-const session = require('express-session');
+const session = require("express-session");
 // session store using mongo
-const MongoStore = require('connect-mongo')(session)
+const MongoStore = require("connect-mongo")(session);
 
-const mongoose = require('./db/index');
+const mongoose = require("./db/index");
 
 app.use(
-    session({
-        secret: process.env.SESSION_SECRET,
-        cookie: { maxAge: 1000 * 60 * 60 * 24 },
-        saveUninitialized: false,
-        //Forces the session to be saved back to the session store, 
-        // even if the session was never modified during the request.
-        resave: true,
-        store: new MongoStore({
-            mongooseConnection: mongoose.connection
-        })
-    })
-)
+  session({
+    secret: process.env.SESSION_SECRET,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 },
+    saveUninitialized: false,
+    //Forces the session to be saved back to the session store,
+    // even if the session was never modified during the request.
+    resave: true,
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+    }),
+  })
+);
 // end of session configuration
 
-
 const cors = require("cors");
-app.use(cors())
+app.use(cors());
 
 // default value for title local
 const projectName = "Wander";
-const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowerCase();
+const capitalized = (string) =>
+  string[0].toUpperCase() + string.slice(1).toLowerCase();
 
 app.locals.title = `${capitalized(projectName)}- Generated with IronGenerator`;
 

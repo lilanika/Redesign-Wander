@@ -20,7 +20,7 @@
     <div class="flexbox-searchbar ">
       <div class="search-bar ">
         <div id="geocoder" class="geocoder"></div>
-        <button class="btn btn-primary " id="saveLocation">save</button>
+        <button class="btn btn-primary " id="saveLocation">save</button></a>
       </div>
     </div>
     <!--cardbody-->
@@ -40,13 +40,15 @@
               </div>
             </div>
           </div>
-          <div class="list">
-            <p class="p-2 secondary-div ">{{place.description}}</p>
-          </div>
+          {{#if place.description}}
+            <div class="list">
+              <p class="p-2 secondary-div ">{{place.description}}</p>
+            </div>
+          {{/if}}
           <div>
             <div class="flexbox-center  my-1">
               <a href="/favoritesPlaces">
-                <a class=" secondary-btn" href="/favoritesPlaces/{{place._id}}/edit">edit</a></a>
+                <a class=" secondary-btn" href="/favoritesPlaces/{{place._id}}/edit"> edit place</a></a>
               <form action="/favoritesPlaces/{{place._id }}/delete" method="POST">
                 <button class="btn " type="submit"><i class="fas fa-trash "></i></button>
               </form>

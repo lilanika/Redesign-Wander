@@ -4,86 +4,144 @@
   <label for="check">
     <i class="fa fa-bars " aria-hidden="hidden" id="btn"> </i>
     <i class=" toggle-icon" id="cancel"></i>
-    </i>
   </label>
   <!--sidebar-->
   <div class="sidebar">
     <header class="flexbox ">
       <h2><a href="/homepage"><i class="fas fa-wave-square header-name "></i></a></h2>
-      {{!-- <span class="p">|</span> --}}
       <span class="tag-color"> Update {{place.name}} </span>
     </header>
     <div class="card-container">
-      <div class="card-body  column  ">
-        <div class='favorite-place-list  card-scrollbar  '>
+      <div class="card-body column">
+        <div class='favorite-place-list card-scrollbar'>
           <div class="list p p-smart">
             <h2>{{place.name}}</h2>
             <p class="secondary-div p">{{place.address}}</p>
-            <div class="flexbox-evenly ">
+            <div class="flexbox-evenly">
               <p class="secondary-div">{{place.tag}}</p>
               <p class="secondary-div">|</p>
               <div class="secondary-div">
                 <i class="fas fa-star primary secondary-div"></i>
                 <span class="secondary-div">{{place.rating}}</span>
-                </i>
               </div>
             </div>
           </div>
           {{#with place}}
             <form class="form" action="/favoritesPlaces/{{_id}}/edit" method="POST">
-              <textarea class="list" name="description" name="description" id="description"
-                placeholder="notes on this spot " value="{{description}}">{{description}}</textarea>
-              <!--<input  type="description" name="description" id="description" value="{{description}}">-->
-              <div class="flexbox-edit-place " edit-place" "><div> 
-  <label for=" tag"> </label>
-                <select class="secondary-btn" name="tag" id="tag">
-                  <option selected> Choose a Tag</option>
-                  <option value="Food">Food </option>
-                  <option value="Cafe">Cafe</option>
-                  <option value="Park">Park</opption>
-                  <option value="Sports">Sports</option>
-                  <option value="Culture">Culture</option>
-                  <option value="Club">Party</option>
-                  <option value="Overnight">Overnight</option>
-                </select>
+              <!-- Stars  -->
+              <div class="list" style="padding: 1.5rem;">
+                <div style="display: flex; gap: 8px;">
+                  <label style="cursor: pointer;">
+                    <input type="radio" name="rating" value="1" {{#if (eq rating 1)}}checked{{/if}}
+                      style="display: none;">
+                    <i class="fas fa-star rating-star {{#if (gte rating 1)}}active{{/if}}"></i>
+                  </label>
+                  <label style="cursor: pointer;">
+                    <input type="radio" name="rating" value="2" {{#if (eq rating 2)}}checked{{/if}}
+                      style="display: none;">
+                    <i class="fas fa-star rating-star {{#if (gte rating 2)}}active{{/if}}"></i>
+                  </label>
+                  <label style="cursor: pointer;">
+                    <input type="radio" name="rating" value="3" {{#if (eq rating 3)}}checked{{/if}}
+                      style="display: none;">
+                    <i class="fas fa-star rating-star {{#if (gte rating 3)}}active{{/if}}"></i>
+                  </label>
+                  <label style="cursor: pointer;">
+                    <input type="radio" name="rating" value="4" {{#if (eq rating 4)}}checked{{/if}}
+                      style="display: none;">
+                    <i class="fas fa-star rating-star {{#if (gte rating 4)}}active{{/if}}"></i>
+                  </label>
+                  <label style="cursor: pointer;">
+                    <input type="radio" name="rating" value="5" {{#if (eq rating 5)}}checked{{/if}}
+                      style="display: none;">
+                    <i class="fas fa-star rating-star {{#if (gte rating 5)}}active{{/if}}"></i>
+                  </label>
+                </div>
               </div>
-              <div class="mx-2 rating-class">
-                <label for="rating"> </label>
-                <i class="fas fa-star primary"></i>
-                <input type="number" name="rating" id="rating" placeholder="0" min="1" max="6"
-                  value="{{rating }}"></input>
+              <div class="list" style="padding: 1.5rem;">
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <label class="tag-pill">
+                    <input type="radio" name="tag" value="Food" {{#if (eq tag 'Food' )}}checked{{/if}}>
+                    <span>🍕 Food</span>
+                  </label>
+                  <label class="tag-pill">
+                    <input type="radio" name="tag" value="Cafe" {{#if (eq tag 'Cafe' )}}checked{{/if}}>
+                    <span>☕ Cafe</span>
+                  </label>
+                  <label class="tag-pill">
+                    <input type="radio" name="tag" value="Park" {{#if (eq tag 'Park' )}}checked{{/if}}>
+                    <span>🌳 Park</span>
+                  </label>
+                  <label class="tag-pill">
+                    <input type="radio" name="tag" value="Sports" {{#if (eq tag 'Sports' )}}checked{{/if}}>
+                    <span>⚽ Sports</span>
+                  </label>
+                  <label class="tag-pill">
+                    <input type="radio" name="tag" value="Culture" {{#if (eq tag 'Culture' )}}checked{{/if}}>
+                    <span>🎭 Culture</span>
+                  </label>
+                  <label class="tag-pill">
+                    <input type="radio" name="tag" value="Club" {{#if (eq tag 'Club' )}}checked{{/if}}>
+                    <span>🎵 Club</span>
+                  </label>
+                  <label class="tag-pill">
+                    <input type="radio" name="tag" value="Overnight" {{#if (eq tag 'Overnight' )}}checked{{/if}}>
+                    <span>🏨 Overnight</span>
+                  </label>
+                </div>
               </div>
-              <button class="btn btn-primary my-2 " id="saveTag" type="submit">+</button>
+              <!-- Notes -->
+              <textarea class="list" name="description" id="description"
+                placeholder="notes on this spot">{{description}}</textarea>
+              <!-- Tags -->
+              <!-- Save Button -->
+              <button class="btn btn-primary my-2" type="submit"
+                style="width: 90%; margin: 1rem auto; display: block; padding: 12px; font-size: 15px; font-weight: 600;">
+                Save Changes
+              </button>
+            </form>
+          {{/with}}
         </div>
-        </form>
-        {{/with}}
-        <!--<button class="btn btn-primary" type="submit">Delete</button> -->
       </div>
     </div>
-    <!--end of card header-->
+    <footer class="footer">
+      <div class="footer-container flexbox-between">
+        <div>
+          <a class="nav" href="/favoritesPlaces">
+            <i class="fa fa-bars nav-btn fa-2x"></i>
+          </a>
+        </div>
+        <div class="border"></div>
+        <div>
+          <input type="checkbox" id="check" checked />
+          <label for="check">
+            <i class="nav-btn fas fa-map-marked-alt fa-2x toggle-nav"></i>
+          </label>
+        </div>
+        <div class="border"></div>
+        <div>
+          <a class="nav" href="/logout">
+            <i class="nav-btn fas fa-sign-out-alt fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
-  <footer class="footer">
-    <div class="footer-container flexbox-between">
-      <div>
-        <a class="nav" href="/favoritesPlaces" class>
-          <i class="fa fa-bars nav-btn fa-2x"></i>
-        </a>
-      </div>
-      <div class="border"></div>
-      <div>
-        <input type="checkbox" id="check" checked />
-        <label for="check">
-          <i class="nav-btn fas fa-map-marked-alt fa-2x toggle-nav"></i>
-        </label>
-      </div>
-      <div class="border"></div>
-      <div>
-        <a class="nav" href="/logout" class>
-          <i class="nav-btn fas fa-sign-out-alt fa-2x"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-  </div>
-  <!--sidebar-->
 </section>
+<script>
+  // Update star colors when clicked
+  document.querySelectorAll('.rating-star').forEach((star, index) => {
+    star.parentElement.addEventListener('click', function () {
+      const rating = index + 1;
+
+      // Update all stars
+      document.querySelectorAll('.rating-star').forEach((s, i) => {
+        if (i < rating) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>
