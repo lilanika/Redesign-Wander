@@ -12,11 +12,11 @@ router.post("/addPlace", (req, res, next) => {
     category,
     user: req.session.user._id,
   })
-    .then(() => {
-      res.redirect("/favoritesPlaces");
+    .then((newPlace) => {
+      res.json({ success: true, place: newPlace }); // ← Should be this!
     })
     .catch((err) => {
-      next(err);
+      res.status(500).json({ success: false, error: err.message });
     });
 });
 
